@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="One step of the cooperative LU factorization">
+<title>One step of the cooperative LU factorization</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="400" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >LU step kk = 2 inside one group (Doolittle, no pivoting)</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >Rows are tinted by the lane that owns them. The system is diagonally dominant by construction, so no pivoting is needed.</text>
+<text class="lab t3" x="70.0" y="108.0" text-anchor="end" xml:space="preserve" >0</text>
+<rect class="w1" x="81.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="108.0" text-anchor="middle" xml:space="preserve" >1/u</text>
+<rect class="w1" x="115.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w1" x="149.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="165.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w1" x="183.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="199.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w1" x="217.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="233.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w1" x="251.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="267.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w1" x="285.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="301.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w1" x="319.0" y="87.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="335.0" y="108.0" text-anchor="middle" xml:space="preserve" >u</text>
+<text class="small t2" x="364.0" y="108.0" text-anchor="start" xml:space="preserve" >lane 0</text>
+<text class="lab t3" x="70.0" y="142.0" text-anchor="end" xml:space="preserve" >1</text>
+<rect class="w2" x="81.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="142.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w2" x="115.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="142.0" text-anchor="middle" xml:space="preserve" >1/u</text>
+<rect class="w2" x="149.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="165.0" y="142.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w2" x="183.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="199.0" y="142.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w2" x="217.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="233.0" y="142.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w2" x="251.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="267.0" y="142.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w2" x="285.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="301.0" y="142.0" text-anchor="middle" xml:space="preserve" >u</text>
+<rect class="w2" x="319.0" y="121.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="335.0" y="142.0" text-anchor="middle" xml:space="preserve" >u</text>
+<text class="small t2" x="364.0" y="142.0" text-anchor="start" xml:space="preserve" >lane 1</text>
+<text class="lab t3" x="70.0" y="176.0" text-anchor="end" xml:space="preserve" >2</text>
+<rect class="w3" x="81.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="176.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w3" x="115.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="176.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w3" x="149.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="183.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="217.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="251.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="285.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="319.0" y="155.0" width="32.0" height="32.0" rx="3" />
+<text class="small t2" x="364.0" y="176.0" text-anchor="start" xml:space="preserve" >lane 2</text>
+<text class="lab t3" x="70.0" y="210.0" text-anchor="end" xml:space="preserve" >3</text>
+<rect class="w4" x="81.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="210.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w4" x="115.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="210.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w4" x="149.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="183.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="217.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="251.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="285.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="319.0" y="189.0" width="32.0" height="32.0" rx="3" />
+<text class="small t2" x="364.0" y="210.0" text-anchor="start" xml:space="preserve" >lane 3</text>
+<text class="lab t3" x="70.0" y="244.0" text-anchor="end" xml:space="preserve" >4</text>
+<rect class="w1" x="81.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="244.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w1" x="115.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="244.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w1" x="149.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<rect class="w1" x="183.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<rect class="w1" x="217.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<rect class="w1" x="251.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<rect class="w1" x="285.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<rect class="w1" x="319.0" y="223.0" width="32.0" height="32.0" rx="3" />
+<text class="small t2" x="364.0" y="244.0" text-anchor="start" xml:space="preserve" >lane 0</text>
+<text class="lab t3" x="70.0" y="278.0" text-anchor="end" xml:space="preserve" >5</text>
+<rect class="w2" x="81.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="278.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w2" x="115.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="278.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w2" x="149.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<rect class="w2" x="183.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<rect class="w2" x="217.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<rect class="w2" x="251.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<rect class="w2" x="285.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<rect class="w2" x="319.0" y="257.0" width="32.0" height="32.0" rx="3" />
+<text class="small t2" x="364.0" y="278.0" text-anchor="start" xml:space="preserve" >lane 1</text>
+<text class="lab t3" x="70.0" y="312.0" text-anchor="end" xml:space="preserve" >6</text>
+<rect class="w3" x="81.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="312.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w3" x="115.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="312.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w3" x="149.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="183.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="217.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="251.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="285.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<rect class="w3" x="319.0" y="291.0" width="32.0" height="32.0" rx="3" />
+<text class="small t2" x="364.0" y="312.0" text-anchor="start" xml:space="preserve" >lane 2</text>
+<text class="lab t3" x="70.0" y="346.0" text-anchor="end" xml:space="preserve" >7</text>
+<rect class="w4" x="81.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="97.0" y="346.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w4" x="115.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="131.0" y="346.0" text-anchor="middle" xml:space="preserve" >l</text>
+<rect class="w4" x="149.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="183.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="217.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="251.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="285.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<rect class="w4" x="319.0" y="325.0" width="32.0" height="32.0" rx="3" />
+<text class="small t2" x="364.0" y="346.0" text-anchor="start" xml:space="preserve" >lane 3</text>
+<rect class="none" x="149.0" y="155.0" width="202.0" height="32.0" rx="3" style="fill:none;stroke:var(--fg);stroke-width:2"/>
+<text class="small b" x="165.0" y="176.0" text-anchor="middle" xml:space="preserve" >u₂₂</text>
+<rect class="none" x="149.0" y="189.0" width="32.0" height="168.0" rx="3" style="fill:none;stroke:var(--fg2);stroke-width:1.5;stroke-dasharray:4 3"/>
+<rect class="none" x="183.0" y="189.0" width="168.0" height="168.0" rx="3" style="fill:none;stroke:var(--fg2);stroke-width:1.5"/>
+<text class="small t2" x="165.0" y="376.0" text-anchor="middle" xml:space="preserve" >l = a·r</text>
+<text class="small t2" x="267.0" y="376.0" text-anchor="middle" xml:space="preserve" >a -= l · (pivot row)</text>
+<circle class="box" cx="440.0" cy="92.0" r="9"/>
+<text class="small b" x="440.0" y="96.0" text-anchor="middle" xml:space="preserve" >1</text>
+<text class="lab t2" x="456.0" y="96.0" text-anchor="start" xml:space="preserve" >Broadcast. The owner of row 2 (lane 2) shares entries 2…7 of</text>
+<text class="lab t2" x="456.0" y="116.0" text-anchor="start" xml:space="preserve" >its row with the other lanes: 6 __shfl_sync calls.</text>
+<circle class="box" cx="440.0" cy="132.0" r="9"/>
+<text class="small b" x="440.0" y="136.0" text-anchor="middle" xml:space="preserve" >2</text>
+<text class="lab t2" x="456.0" y="136.0" text-anchor="start" xml:space="preserve" >Reciprocal. Every lane computes r = 1/u₂₂ with femsweepRcp:</text>
+<text class="lab t2" x="456.0" y="156.0" text-anchor="start" xml:space="preserve" >a hardware estimate plus two Newton steps, no slow-path branch.</text>
+<circle class="box" cx="440.0" cy="172.0" r="9"/>
+<text class="small b" x="440.0" y="176.0" text-anchor="middle" xml:space="preserve" >3</text>
+<text class="lab t2" x="456.0" y="176.0" text-anchor="start" xml:space="preserve" >Keep r. The owner overwrites u₂₂ with r, since only the back</text>
+<text class="lab t2" x="456.0" y="196.0" text-anchor="start" xml:space="preserve" >substitution reads the diagonal again: it then multiplies by r</text>
+<text class="lab t2" x="456.0" y="216.0" text-anchor="start" xml:space="preserve" >instead of dividing by u₂₂.</text>
+<circle class="box" cx="440.0" cy="232.0" r="9"/>
+<text class="small b" x="440.0" y="236.0" text-anchor="middle" xml:space="preserve" >4</text>
+<text class="lab t2" x="456.0" y="236.0" text-anchor="start" xml:space="preserve" >Eliminate. Each lane scales column 2 of its rows below 2 by r</text>
+<text class="lab t2" x="456.0" y="256.0" text-anchor="start" xml:space="preserve" >(dashed) and subtracts multiples of the pivot row (solid box).</text>
+<text class="lab t2" x="456.0" y="276.0" text-anchor="start" xml:space="preserve" ></text>
+<text class="lab t2" x="456.0" y="296.0" text-anchor="start" xml:space="preserve" >Per element: 8 steps, 36 + 15 shuffles for LU and substitutions,</text>
+<text class="lab t2" x="456.0" y="316.0" text-anchor="start" xml:space="preserve" >8 reciprocals, no divisions.</text>
+</svg>

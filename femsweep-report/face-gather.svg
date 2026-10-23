@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-label="Gathering the upwind face terms into the right-hand side">
+<title>Gathering the upwind face terms into the right-hand side</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="500" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >Step 1–2 of an element solve: upwind face terms into b</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >Shown for a direction whose incoming faces are x-, y-, z-; the face-to-dof map below is illustrative.</text>
+<text class="lab b" x="24.0" y="88.0" text-anchor="start" xml:space="preserve" >Face table entry for (element e, local face): 8 ints, built once at setup (femsweepFaceTable)</text>
+<rect class="box" x="24.0" y="98.0" width="86.0" height="30.0" rx="4" />
+<text class="small t2" x="67.0" y="118.0" text-anchor="middle" xml:space="preserve" >Fdat offset</text>
+<rect class="box" x="114.0" y="98.0" width="86.0" height="30.0" rx="4" />
+<text class="small t2" x="157.0" y="118.0" text-anchor="middle" xml:space="preserve" >target dofs</text>
+<rect class="box" x="204.0" y="98.0" width="176.0" height="30.0" rx="4" />
+<text class="small t2" x="292.0" y="118.0" text-anchor="middle" xml:space="preserve" >unused</text>
+<rect class="box" x="384.0" y="98.0" width="356.0" height="30.0" rx="4" />
+<text class="small t2" x="562.0" y="118.0" text-anchor="middle" xml:space="preserve" >upwind dof index dis₀…dis₃</text>
+<text class="small t3" x="24.0" y="146.0" text-anchor="start" xml:space="preserve" >Replaces the chain elem_to_faces -&gt; F_g2l -&gt; idx1/idx2, which needed 4 dependent loads per face. None of it depends on angle or group.</text>
+<text class="lab b" x="24.0" y="180.0" text-anchor="start" xml:space="preserve" >Lane l computes face dof j = l on every face:</text>
+<text class="mono" x="24.0" y="202.0" text-anchor="start" xml:space="preserve" >F = Σᵢ Ffactor · F[j][i] · X[disᵢ]</text>
+<text class="lab t2" x="24.0" y="222.0" text-anchor="start" xml:space="preserve" >if the face is incoming and interior,</text>
+<text class="lab t2" x="24.0" y="240.0" text-anchor="start" xml:space="preserve" >and writes it to face_b[face][dof(j)].</text>
+<text class="lab t2" x="24.0" y="266.0" text-anchor="start" xml:space="preserve" >6 faces × 4 face dofs = 24 terms,</text>
+<text class="lab t2" x="24.0" y="284.0" text-anchor="start" xml:space="preserve" >6 per lane.</text>
+<text class="small t3" x="24.0" y="316.0" text-anchor="start" xml:space="preserve" >face_b lives in shared memory, one</text>
+<text class="small t3" x="24.0" y="330.0" text-anchor="start" xml:space="preserve" >slice per group, stride 48 + 4 doubles</text>
+<text class="small t3" x="24.0" y="344.0" text-anchor="start" xml:space="preserve" >(the padding avoids bank conflicts).</text>
+<text class="lab b" x="360.0" y="182.0" text-anchor="start" xml:space="preserve" >face_b[face][element dof]</text>
+<text class="small t3" x="377.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 0</text>
+<text class="small t3" x="411.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 1</text>
+<text class="small t3" x="445.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 2</text>
+<text class="small t3" x="479.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 3</text>
+<text class="small t3" x="513.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 4</text>
+<text class="small t3" x="547.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 5</text>
+<text class="small t3" x="581.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 6</text>
+<text class="small t3" x="615.0" y="202.0" text-anchor="middle" xml:space="preserve" >dof 7</text>
+<text class="lab t2" x="350.0" y="232.0" text-anchor="end" xml:space="preserve" >x-</text>
+<rect class="w1" x="361.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="377.0" y="231.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="395.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="411.0" y="231.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="w1" x="429.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="445.0" y="231.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="463.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="479.0" y="231.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="w1" x="497.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="513.0" y="231.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="531.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="547.0" y="231.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="w1" x="565.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="581.0" y="231.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="599.0" y="211.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="615.0" y="231.0" text-anchor="middle" xml:space="preserve" >0</text>
+<text class="small t2" x="642.0" y="231.0" text-anchor="start" xml:space="preserve" >incoming</text>
+<text class="lab t2" x="350.0" y="266.0" text-anchor="end" xml:space="preserve" >x+</text>
+<rect class="box" x="361.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="377.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="395.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="411.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="429.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="445.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="463.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="479.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="497.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="513.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="531.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="547.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="565.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="581.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="599.0" y="245.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="615.0" y="265.0" text-anchor="middle" xml:space="preserve" >0</text>
+<text class="small t3" x="642.0" y="265.0" text-anchor="start" xml:space="preserve" >outgoing: stays 0</text>
+<text class="lab t2" x="350.0" y="300.0" text-anchor="end" xml:space="preserve" >y-</text>
+<rect class="w1" x="361.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="377.0" y="299.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="w1" x="395.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="411.0" y="299.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="429.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="445.0" y="299.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="463.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="479.0" y="299.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="w1" x="497.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="513.0" y="299.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="w1" x="531.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="547.0" y="299.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="565.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="581.0" y="299.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="599.0" y="279.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="615.0" y="299.0" text-anchor="middle" xml:space="preserve" >0</text>
+<text class="small t2" x="642.0" y="299.0" text-anchor="start" xml:space="preserve" >incoming</text>
+<text class="lab t2" x="350.0" y="334.0" text-anchor="end" xml:space="preserve" >y+</text>
+<rect class="box" x="361.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="377.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="395.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="411.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="429.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="445.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="463.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="479.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="497.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="513.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="531.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="547.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="565.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="581.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="599.0" y="313.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="615.0" y="333.0" text-anchor="middle" xml:space="preserve" >0</text>
+<text class="small t3" x="642.0" y="333.0" text-anchor="start" xml:space="preserve" >outgoing: stays 0</text>
+<text class="lab t2" x="350.0" y="368.0" text-anchor="end" xml:space="preserve" >z-</text>
+<rect class="w1" x="361.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="377.0" y="367.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="w1" x="395.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="411.0" y="367.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="w1" x="429.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="445.0" y="367.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="w1" x="463.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small" x="479.0" y="367.0" text-anchor="middle" xml:space="preserve" >F</text>
+<rect class="box" x="497.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="513.0" y="367.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="531.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="547.0" y="367.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="565.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="581.0" y="367.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="599.0" y="347.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="615.0" y="367.0" text-anchor="middle" xml:space="preserve" >0</text>
+<text class="small t2" x="642.0" y="367.0" text-anchor="start" xml:space="preserve" >incoming</text>
+<text class="lab t2" x="350.0" y="402.0" text-anchor="end" xml:space="preserve" >z+</text>
+<rect class="box" x="361.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="377.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="395.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="411.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="429.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="445.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="463.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="479.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="497.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="513.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="531.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="547.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="565.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="581.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="box" x="599.0" y="381.0" width="32.0" height="32.0" rx="3" />
+<text class="small t3" x="615.0" y="401.0" text-anchor="middle" xml:space="preserve" >0</text>
+<text class="small t3" x="642.0" y="401.0" text-anchor="start" xml:space="preserve" >outgoing: stays 0</text>
+<line class="arrow" x1="377.0" y1="424.0" x2="377.0" y2="442.0"/>
+<rect class="f1" x="364.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="377.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">b0</text>
+<line class="arrow" x1="411.0" y1="424.0" x2="411.0" y2="442.0"/>
+<rect class="f2" x="398.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="411.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">b1</text>
+<line class="arrow" x1="445.0" y1="424.0" x2="445.0" y2="442.0"/>
+<rect class="f3" x="432.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="445.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">b2</text>
+<line class="arrow" x1="479.0" y1="424.0" x2="479.0" y2="442.0"/>
+<rect class="f4" x="466.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="479.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">b3</text>
+<line class="arrow" x1="513.0" y1="424.0" x2="513.0" y2="442.0"/>
+<rect class="f1" x="500.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="513.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">b4</text>
+<line class="arrow" x1="547.0" y1="424.0" x2="547.0" y2="442.0"/>
+<rect class="f2" x="534.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="547.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">b5</text>
+<line class="arrow" x1="581.0" y1="424.0" x2="581.0" y2="442.0"/>
+<rect class="f3" x="568.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="581.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">b6</text>
+<line class="arrow" x1="615.0" y1="424.0" x2="615.0" y2="442.0"/>
+<rect class="f4" x="602.0" y="448.0" width="26.0" height="24.0" rx="4" />
+<text class="small b" x="615.0" y="464.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">b7</text>
+<text class="small t2" x="642.0" y="464.0" text-anchor="start" xml:space="preserve" >lane d % 4 sums column d into b_d</text>
+</svg>

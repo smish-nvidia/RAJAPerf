@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 390" width="860" height="390" role="img" aria-label="Upwind X loads under the two X layouts">
+<title>Upwind X loads under the two X layouts</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="390" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >One warp gathering upwind dof x_d for its 8 groups</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >dag kernels: the warp's 8 groups share (angle, element), so they read the same dof of 8 different groups.</text>
+<text class="lab b" x="24.0" y="92.0" text-anchor="start" xml:space="preserve" >Xdat layout [a][g][e][dof]: groups are 256 KB apart (32³ mesh)</text>
+<rect class="box" x="26.0" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="34.0" y="125.0" text-anchor="start" xml:space="preserve" >group 0</text>
+<rect class="f2" x="97.1" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="127.5" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="135.5" y="125.0" text-anchor="start" xml:space="preserve" >group 1</text>
+<rect class="f2" x="198.6" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="229.0" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="237.0" y="125.0" text-anchor="start" xml:space="preserve" >group 2</text>
+<rect class="f2" x="300.1" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="330.5" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="338.5" y="125.0" text-anchor="start" xml:space="preserve" >group 3</text>
+<rect class="f2" x="401.6" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="432.0" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="440.0" y="125.0" text-anchor="start" xml:space="preserve" >group 4</text>
+<rect class="f2" x="503.1" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="533.5" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="541.5" y="125.0" text-anchor="start" xml:space="preserve" >group 5</text>
+<rect class="f2" x="604.6" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="635.0" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="643.0" y="125.0" text-anchor="start" xml:space="preserve" >group 6</text>
+<rect class="f2" x="706.1" y="106.0" width="5.0" height="28.0" rx="1" />
+<rect class="box" x="736.5" y="106.0" width="97.5" height="28.0" rx="4" />
+<text class="small t3" x="744.5" y="125.0" text-anchor="start" xml:space="preserve" >group 7</text>
+<rect class="f2" x="807.6" y="106.0" width="5.0" height="28.0" rx="1" />
+<text class="lab t2" x="24.0" y="158.0" text-anchor="start" xml:space="preserve" >So every load instruction touches 8 cache lines (6 sectors on average with some faces inactive);</text>
+<text class="lab t2" x="24.0" y="176.0" text-anchor="start" xml:space="preserve" >the X gather was 54% of all global memory sectors and the top stall location.</text>
+<text class="lab b" x="24.0" y="222.0" text-anchor="start" xml:space="preserve" >Group-innermost [a][e][dof][g]: the 8 values are adjacent</text>
+<rect class="box" x="24.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="39.0" y="255.0" text-anchor="middle" xml:space="preserve" >g12</text>
+<rect class="box" x="56.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="71.0" y="255.0" text-anchor="middle" xml:space="preserve" >g13</text>
+<rect class="box" x="88.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="103.0" y="255.0" text-anchor="middle" xml:space="preserve" >g14</text>
+<rect class="box" x="120.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="135.0" y="255.0" text-anchor="middle" xml:space="preserve" >g15</text>
+<rect class="f1" x="152.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="167.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g0</text>
+<rect class="f1" x="184.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="199.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g1</text>
+<rect class="f1" x="216.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="231.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g2</text>
+<rect class="f1" x="248.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="263.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g3</text>
+<rect class="f1" x="280.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="295.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g4</text>
+<rect class="f1" x="312.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="327.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g5</text>
+<rect class="f1" x="344.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="359.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g6</text>
+<rect class="f1" x="376.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small" x="391.0" y="255.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">g7</text>
+<rect class="box" x="408.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="423.0" y="255.0" text-anchor="middle" xml:space="preserve" >g8</text>
+<rect class="box" x="440.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="455.0" y="255.0" text-anchor="middle" xml:space="preserve" >g9</text>
+<rect class="box" x="472.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="487.0" y="255.0" text-anchor="middle" xml:space="preserve" >g10</text>
+<rect class="box" x="504.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="519.0" y="255.0" text-anchor="middle" xml:space="preserve" >g11</text>
+<rect class="box" x="536.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="551.0" y="255.0" text-anchor="middle" xml:space="preserve" >g12</text>
+<rect class="box" x="568.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="583.0" y="255.0" text-anchor="middle" xml:space="preserve" >g13</text>
+<rect class="box" x="600.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="615.0" y="255.0" text-anchor="middle" xml:space="preserve" >g14</text>
+<rect class="box" x="632.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="647.0" y="255.0" text-anchor="middle" xml:space="preserve" >g15</text>
+<rect class="box" x="664.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="679.0" y="255.0" text-anchor="middle" xml:space="preserve" >g0</text>
+<rect class="box" x="696.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="711.0" y="255.0" text-anchor="middle" xml:space="preserve" >g1</text>
+<rect class="box" x="728.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="743.0" y="255.0" text-anchor="middle" xml:space="preserve" >g2</text>
+<rect class="box" x="760.0" y="236.0" width="30.0" height="28.0" rx="3" />
+<text class="small t3" x="775.0" y="255.0" text-anchor="middle" xml:space="preserve" >g3</text>
+<path class="edge" d="M24,272 v5 h126 v-5"/>
+<text class="small t3" x="88.0" y="292.0" text-anchor="middle" xml:space="preserve" >dof d-1</text>
+<path class="edge" d="M152,272 v5 h510 v-5"/>
+<text class="small t3" x="408.0" y="292.0" text-anchor="middle" xml:space="preserve" >dof d: its 16 groups</text>
+<path class="edge" d="M664,272 v5 h126 v-5"/>
+<text class="small t3" x="728.0" y="292.0" text-anchor="middle" xml:space="preserve" >dof d+1</text>
+<text class="lab t2" x="24.0" y="318.0" text-anchor="start" xml:space="preserve" >So the warp's 8 groups (blue) read 64 contiguous bytes: 2 sectors in 1 cache line.</text>
+<text class="lab t2" x="24.0" y="346.0" text-anchor="start" xml:space="preserve" >The sweep runs 12% faster at 32³, but converting back to Xdat's layout costs ~3.7 ms (4.8 GB moved), more than it saves.</text>
+<text class="lab t2" x="24.0" y="364.0" text-anchor="start" xml:space="preserve" >It pays only if the application keeps X in this layout between sweeps.</text>
+</svg>

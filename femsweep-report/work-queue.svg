@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-label="The persistent work queue">
+<title>The persistent work queue</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="500" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >dagqueue: a write-once queue, dependency counts, and the release chain</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >Every (angle, element) is pushed exactly once per sweep, so the queue is a plain array with no wraparound.</text>
+<text class="lab b" x="24.0" y="84.0" text-anchor="start" xml:space="preserve" >queue[ ]  (one int per slot; -1 = not written yet)</text>
+<rect class="w1" x="24.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="45.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="45.0" y="156.0" text-anchor="middle" xml:space="preserve" >0</text>
+<rect class="w1" x="70.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="91.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="91.0" y="156.0" text-anchor="middle" xml:space="preserve" >1</text>
+<rect class="w1" x="116.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="137.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="137.0" y="156.0" text-anchor="middle" xml:space="preserve" >2</text>
+<rect class="w1" x="162.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="183.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="183.0" y="156.0" text-anchor="middle" xml:space="preserve" >3</text>
+<rect class="w1" x="208.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="229.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="229.0" y="156.0" text-anchor="middle" xml:space="preserve" >4</text>
+<rect class="w2" x="254.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="275.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="275.0" y="156.0" text-anchor="middle" xml:space="preserve" >5</text>
+<rect class="w2" x="300.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small" x="321.0" y="130.0" text-anchor="middle" xml:space="preserve" >(a,e)</text>
+<text class="small t3" x="321.0" y="156.0" text-anchor="middle" xml:space="preserve" >6</text>
+<rect class="box" x="346.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="367.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="367.0" y="156.0" text-anchor="middle" xml:space="preserve" >7</text>
+<rect class="box" x="392.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="413.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="413.0" y="156.0" text-anchor="middle" xml:space="preserve" >8</text>
+<rect class="box" x="438.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="459.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="459.0" y="156.0" text-anchor="middle" xml:space="preserve" >9</text>
+<rect class="box" x="484.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="505.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="505.0" y="156.0" text-anchor="middle" xml:space="preserve" >10</text>
+<rect class="box" x="530.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="551.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="551.0" y="156.0" text-anchor="middle" xml:space="preserve" >11</text>
+<rect class="box" x="576.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="597.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="597.0" y="156.0" text-anchor="middle" xml:space="preserve" >12</text>
+<rect class="box" x="622.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="643.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="643.0" y="156.0" text-anchor="middle" xml:space="preserve" >13</text>
+<rect class="box" x="668.0" y="110.0" width="42.0" height="30.0" rx="4" />
+<text class="small t2" x="689.0" y="130.0" text-anchor="middle" xml:space="preserve" >-1</text>
+<text class="small t3" x="689.0" y="156.0" text-anchor="middle" xml:space="preserve" >14</text>
+<path class="ffg2" d="M362.0,100 L372.0,100 L367.0,107 Z"/>
+<text class="small b" x="367.0" y="96.0" text-anchor="middle" xml:space="preserve" >pushed = 7</text>
+<path class="ffg2" d="M454.0,100 L464.0,100 L459.0,107 Z"/>
+<text class="small b" x="459.0" y="96.0" text-anchor="middle" xml:space="preserve" >taken = 9</text>
+<text class="small t3" x="24.0" y="180.0" text-anchor="start" xml:space="preserve" >slots 0–4: taken and being solved by warps · 5–6: pushed, will be taken next ·</text>
+<text class="small t3" x="24.0" y="194.0" text-anchor="start" xml:space="preserve" >7–8: taken by warps that spin (with __nanosleep) until a producer writes the slot</text>
+<text class="lab b" x="24.0" y="236.0" text-anchor="start" xml:space="preserve" >Each warp loops:</text>
+<text class="mono t2" x="24.0" y="258.0" text-anchor="start" xml:space="preserve" >1  slot = atomicAdd(taken, 1); exit if slot &gt;= n</text>
+<text class="mono t2" x="24.0" y="277.0" text-anchor="start" xml:space="preserve" >2  wait until queue[slot] &gt;= 0 (acquire load), then reset it to -1 and count[item] to 0</text>
+<text class="mono t2" x="24.0" y="296.0" text-anchor="start" xml:space="preserve" >3  look up the downwind neighbors across outgoing faces (overlaps the solve)</text>
+<text class="mono t2" x="24.0" y="315.0" text-anchor="start" xml:space="preserve" >4  solve the element for all 16 groups (2 passes of 8 groups)</text>
+<text class="mono t2" x="24.0" y="334.0" text-anchor="start" xml:space="preserve" >5  __syncwarp, then for each downwind element d:</text>
+<text class="mono t2" x="24.0" y="353.0" text-anchor="start" xml:space="preserve" >     if atomicAdd(count[d], 1) + 1 == indeg[d]  (acq_rel)</text>
+<text class="mono t2" x="24.0" y="372.0" text-anchor="start" xml:space="preserve" >        queue[atomicAdd(pushed, 1)] = d  (release store)</text>
+<text class="lab b" x="24.0" y="420.0" text-anchor="start" xml:space="preserve" >Why the consumer sees every upwind X it reads:</text>
+<rect class="box" x="24.0" y="432.0" width="66.4" height="26.0" rx="4" />
+<text class="small" x="57.2" y="449.0" text-anchor="middle" xml:space="preserve" >X writes</text>
+<line class="arrow" x1="92.4" y1="445.0" x2="103.4" y2="445.0"/>
+<rect class="box" x="106.4" y="432.0" width="79.0" height="26.0" rx="4" />
+<text class="small" x="145.9" y="449.0" text-anchor="middle" xml:space="preserve" >__syncwarp</text>
+<line class="arrow" x1="187.4" y1="445.0" x2="198.4" y2="445.0"/>
+<rect class="box" x="201.4" y="432.0" width="142.0" height="26.0" rx="4" />
+<text class="small" x="272.4" y="449.0" text-anchor="middle" xml:space="preserve" >count += 1 (acq_rel)</text>
+<line class="arrow" x1="345.4" y1="445.0" x2="356.4" y2="445.0"/>
+<rect class="box" x="359.4" y="432.0" width="104.2" height="26.0" rx="4" />
+<text class="small" x="411.5" y="449.0" text-anchor="middle" xml:space="preserve" >push (release)</text>
+<line class="arrow" x1="465.6" y1="445.0" x2="476.6" y2="445.0"/>
+<rect class="box" x="479.6" y="432.0" width="97.9" height="26.0" rx="4" />
+<text class="small" x="528.5" y="449.0" text-anchor="middle" xml:space="preserve" >pop (acquire)</text>
+<line class="arrow" x1="579.5" y1="445.0" x2="590.5" y2="445.0"/>
+<rect class="box" x="593.5" y="432.0" width="79.0" height="26.0" rx="4" />
+<text class="small" x="633.0" y="449.0" text-anchor="middle" xml:space="preserve" >__syncwarp</text>
+<line class="arrow" x1="674.5" y1="445.0" x2="685.5" y2="445.0"/>
+<rect class="box" x="688.5" y="432.0" width="97.9" height="26.0" rx="4" />
+<text class="small" x="737.5" y="449.0" text-anchor="middle" xml:space="preserve" >read upwind X</text>
+<text class="small t3" x="24.0" y="478.0" text-anchor="start" xml:space="preserve" >No deadlock: a waiting warp holds no item, and every pushed item is held by a running warp, whose completion pushes more.</text>
+</svg>

@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-label="How a warp is divided among element solves">
+<title>How a warp is divided among element solves</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="500" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >A warp = 8 groups of 4 lanes; each group solves one 8×8 element system</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >The two kernel families fill a warp's 8 groups differently. Lanes are colored by their index within the group.</text>
+<text class="lab b" x="24.0" y="90.0" text-anchor="start" xml:space="preserve" >coop_256: one block per (angle a, group g); the 8 groups take 8 different elements of the hyperplane</text>
+<rect class="f1" x="24.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="34.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">0</text>
+<rect class="f2" x="46.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="56.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">1</text>
+<rect class="f3" x="68.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="78.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">2</text>
+<rect class="f4" x="90.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="100.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">3</text>
+<path class="edge" d="M24,130 v5 h86 v-5"/>
+<text class="lab t2" x="67.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e0</text>
+<rect class="f1" x="121.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="131.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">4</text>
+<rect class="f2" x="143.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="153.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">5</text>
+<rect class="f3" x="165.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="175.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">6</text>
+<rect class="f4" x="187.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="197.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">7</text>
+<path class="edge" d="M121,130 v5 h86 v-5"/>
+<text class="lab t2" x="164.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e1</text>
+<rect class="f1" x="218.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="228.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">8</text>
+<rect class="f2" x="240.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="250.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">9</text>
+<rect class="f3" x="262.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="272.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">10</text>
+<rect class="f4" x="284.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="294.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">11</text>
+<path class="edge" d="M218,130 v5 h86 v-5"/>
+<text class="lab t2" x="261.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e2</text>
+<rect class="f1" x="315.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="325.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">12</text>
+<rect class="f2" x="337.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="347.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">13</text>
+<rect class="f3" x="359.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="369.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">14</text>
+<rect class="f4" x="381.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="391.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">15</text>
+<path class="edge" d="M315,130 v5 h86 v-5"/>
+<text class="lab t2" x="358.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e3</text>
+<rect class="f1" x="412.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="422.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">16</text>
+<rect class="f2" x="434.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="444.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">17</text>
+<rect class="f3" x="456.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="466.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">18</text>
+<rect class="f4" x="478.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="488.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">19</text>
+<path class="edge" d="M412,130 v5 h86 v-5"/>
+<text class="lab t2" x="455.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e4</text>
+<rect class="f1" x="509.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="519.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">20</text>
+<rect class="f2" x="531.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="541.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">21</text>
+<rect class="f3" x="553.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="563.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">22</text>
+<rect class="f4" x="575.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="585.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">23</text>
+<path class="edge" d="M509,130 v5 h86 v-5"/>
+<text class="lab t2" x="552.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e5</text>
+<rect class="f1" x="606.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="616.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">24</text>
+<rect class="f2" x="628.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="638.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">25</text>
+<rect class="f3" x="650.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="660.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">26</text>
+<rect class="f4" x="672.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="682.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">27</text>
+<path class="edge" d="M606,130 v5 h86 v-5"/>
+<text class="lab t2" x="649.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e6</text>
+<rect class="f1" x="703.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="713.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">28</text>
+<rect class="f2" x="725.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="735.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">29</text>
+<rect class="f3" x="747.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="757.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">30</text>
+<rect class="f4" x="769.0" y="100.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="779.0" y="115.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">31</text>
+<path class="edge" d="M703,130 v5 h86 v-5"/>
+<text class="lab t2" x="746.0" y="150.0" text-anchor="middle" xml:space="preserve" >element e7</text>
+<text class="lab b" x="24.0" y="190.0" text-anchor="start" xml:space="preserve" >dag kernels: one warp per (angle a, element e); the 8 groups are 8 energy groups of that element</text>
+<rect class="f1" x="24.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="34.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">0</text>
+<rect class="f2" x="46.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="56.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">1</text>
+<rect class="f3" x="68.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="78.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">2</text>
+<rect class="f4" x="90.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="100.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">3</text>
+<path class="edge" d="M24,230 v5 h86 v-5"/>
+<text class="lab t2" x="67.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+0</text>
+<rect class="f1" x="121.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="131.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">4</text>
+<rect class="f2" x="143.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="153.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">5</text>
+<rect class="f3" x="165.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="175.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">6</text>
+<rect class="f4" x="187.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="197.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">7</text>
+<path class="edge" d="M121,230 v5 h86 v-5"/>
+<text class="lab t2" x="164.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+1</text>
+<rect class="f1" x="218.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="228.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">8</text>
+<rect class="f2" x="240.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="250.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">9</text>
+<rect class="f3" x="262.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="272.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">10</text>
+<rect class="f4" x="284.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="294.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">11</text>
+<path class="edge" d="M218,230 v5 h86 v-5"/>
+<text class="lab t2" x="261.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+2</text>
+<rect class="f1" x="315.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="325.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">12</text>
+<rect class="f2" x="337.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="347.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">13</text>
+<rect class="f3" x="359.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="369.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">14</text>
+<rect class="f4" x="381.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="391.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">15</text>
+<path class="edge" d="M315,230 v5 h86 v-5"/>
+<text class="lab t2" x="358.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+3</text>
+<rect class="f1" x="412.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="422.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">16</text>
+<rect class="f2" x="434.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="444.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">17</text>
+<rect class="f3" x="456.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="466.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">18</text>
+<rect class="f4" x="478.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="488.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">19</text>
+<path class="edge" d="M412,230 v5 h86 v-5"/>
+<text class="lab t2" x="455.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+4</text>
+<rect class="f1" x="509.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="519.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">20</text>
+<rect class="f2" x="531.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="541.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">21</text>
+<rect class="f3" x="553.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="563.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">22</text>
+<rect class="f4" x="575.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="585.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">23</text>
+<path class="edge" d="M509,230 v5 h86 v-5"/>
+<text class="lab t2" x="552.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+5</text>
+<rect class="f1" x="606.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="616.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">24</text>
+<rect class="f2" x="628.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="638.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">25</text>
+<rect class="f3" x="650.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="660.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">26</text>
+<rect class="f4" x="672.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="682.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">27</text>
+<path class="edge" d="M606,230 v5 h86 v-5"/>
+<text class="lab t2" x="649.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+6</text>
+<rect class="f1" x="703.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="713.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">28</text>
+<rect class="f2" x="725.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="735.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#ffffff">29</text>
+<rect class="f3" x="747.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="757.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">30</text>
+<rect class="f4" x="769.0" y="200.0" width="20.0" height="22.0" rx="3" />
+<text class="small" x="779.0" y="215.0" text-anchor="middle" xml:space="preserve" style="fill:#0b0b0b">31</text>
+<path class="edge" d="M703,230 v5 h86 v-5"/>
+<text class="lab t2" x="746.0" y="250.0" text-anchor="middle" xml:space="preserve" >group g+7</text>
+<text class="small t3" x="24.0" y="278.0" text-anchor="start" xml:space="preserve" >dag: the 8 groups read the same A, B, M0 rows, F blocks and face table entries, so those loads are shared by the whole warp.</text>
+<text class="lab b" x="24.0" y="310.0" text-anchor="start" xml:space="preserve" >Inside one group: lane l owns rows l and l + 4 of the system</text>
+<text class="small t3" x="76.0" y="336.0" text-anchor="end" xml:space="preserve" >row 0</text>
+<rect class="f1" x="84.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="102.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="120.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="138.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="156.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="174.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="192.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="210.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="238.0" y="324.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="354.0" text-anchor="end" xml:space="preserve" >row 1</text>
+<rect class="f2" x="84.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="102.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="120.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="138.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="156.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="174.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="192.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="210.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="238.0" y="342.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="372.0" text-anchor="end" xml:space="preserve" >row 2</text>
+<rect class="f3" x="84.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="102.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="120.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="138.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="156.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="174.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="192.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="210.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="238.0" y="360.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="390.0" text-anchor="end" xml:space="preserve" >row 3</text>
+<rect class="f4" x="84.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="102.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="120.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="138.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="156.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="174.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="192.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="210.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="238.0" y="378.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="408.0" text-anchor="end" xml:space="preserve" >row 4</text>
+<rect class="f1" x="84.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="102.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="120.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="138.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="156.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="174.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="192.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="210.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<rect class="f1" x="238.0" y="396.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="426.0" text-anchor="end" xml:space="preserve" >row 5</text>
+<rect class="f2" x="84.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="102.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="120.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="138.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="156.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="174.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="192.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="210.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<rect class="f2" x="238.0" y="414.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="444.0" text-anchor="end" xml:space="preserve" >row 6</text>
+<rect class="f3" x="84.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="102.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="120.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="138.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="156.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="174.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="192.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="210.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<rect class="f3" x="238.0" y="432.0" width="16.0" height="16.0" rx="2" />
+<text class="small t3" x="76.0" y="462.0" text-anchor="end" xml:space="preserve" >row 7</text>
+<rect class="f4" x="84.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="102.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="120.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="138.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="156.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="174.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="192.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="210.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<rect class="f4" x="238.0" y="450.0" width="16.0" height="16.0" rx="2" />
+<text class="small t2" x="156.0" y="482.0" text-anchor="middle" xml:space="preserve" >(A + σ·M0), 8 × 8</text>
+<text class="small t2" x="246.0" y="482.0" text-anchor="middle" xml:space="preserve" >b</text>
+<text class="lab t2" x="306.0" y="338.0" text-anchor="start" xml:space="preserve" >• 2 rows × 8 entries + 2 entries of b per lane, held in registers</text>
+<text class="lab t2" x="306.0" y="358.0" text-anchor="start" xml:space="preserve" >• row kk lives in lane kk % 4, slot kk / 4: compile-time constants in the</text>
+<text class="lab t2" x="306.0" y="378.0" text-anchor="start" xml:space="preserve" >   unrolled loops, so no indexing cost</text>
+<text class="lab t2" x="306.0" y="398.0" text-anchor="start" xml:space="preserve" >• the LU step broadcasts each pivot row with __shfl_sync inside the group</text>
+<text class="lab t2" x="306.0" y="418.0" text-anchor="start" xml:space="preserve" >• 4 lanes (rather than 8 or 1) balances registers per lane against how</text>
+<text class="lab t2" x="306.0" y="438.0" text-anchor="start" xml:space="preserve" >   many elements a warp solves at once</text>
+</svg>

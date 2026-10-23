@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img" aria-label="Schematic timelines of the three schedules">
+<title>Schematic timelines of the three schedules</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="420" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >Three ways to schedule the same DAG (schematic, not to scale)</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >Each bar is GPU work over time; color marks the kind of unit doing it.</text>
+<text class="lab b" x="24.0" y="96.0" text-anchor="start" xml:space="preserve" >coop / original</text>
+<text class="small t2" x="24.0" y="112.0" text-anchor="start" xml:space="preserve" >one block per (a, g)</text>
+<rect class="f3" x="210.0" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="253.1" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="296.2" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="339.4" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="382.5" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="425.6" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="468.7" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="511.9" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="555.0" y="84.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="210.0" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="253.1" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="296.2" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="339.4" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="382.5" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="425.6" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="468.7" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="511.9" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="555.0" y="96.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="210.0" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="253.1" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="296.2" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="339.4" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="382.5" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="425.6" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="468.7" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="511.9" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="555.0" y="108.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="210.0" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="253.1" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="296.2" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="339.4" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="382.5" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="425.6" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="468.7" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="511.9" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="555.0" y="120.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="210.0" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="253.1" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="296.2" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="339.4" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="382.5" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="425.6" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="468.7" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="511.9" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="555.0" y="132.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="210.0" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="253.1" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="296.2" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="339.4" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="382.5" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="425.6" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="468.7" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="511.9" y="144.0" width="40.1" height="9.0" rx="2" />
+<rect class="f3" x="555.0" y="144.0" width="40.1" height="9.0" rx="2" />
+<text class="small t3" x="210.0" y="170.0" text-anchor="start" xml:space="preserve" >barrier per hyperplane inside each block; 1,152 blocks rarely fill whole waves, so a partial last wave:</text>
+<rect class="f3" x="604.1" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="630.0" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="655.9" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="681.7" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="707.6" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="733.5" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="759.4" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="785.2" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="811.1" y="180.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="604.1" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="630.0" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="655.9" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="681.7" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="707.6" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="733.5" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="759.4" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="785.2" y="192.0" width="23.9" height="9.0" rx="2" />
+<rect class="f3" x="811.1" y="192.0" width="23.9" height="9.0" rx="2" />
+<text class="lab b" x="24.0" y="242.0" text-anchor="start" xml:space="preserve" >daglevels / daggraph</text>
+<text class="small t2" x="24.0" y="258.0" text-anchor="start" xml:space="preserve" >one launch per hyperplane</text>
+<rect class="f1" x="210.0" y="267.9" width="15.9" height="12.1" rx="2" />
+<rect class="f1" x="233.9" y="263.7" width="15.9" height="16.3" rx="2" />
+<rect class="f1" x="257.8" y="257.4" width="23.9" height="22.6" rx="2" />
+<rect class="f1" x="289.7" y="248.9" width="39.9" height="31.1" rx="2" />
+<rect class="f1" x="337.6" y="238.4" width="59.8" height="41.6" rx="2" />
+<rect class="f1" x="405.4" y="232.1" width="71.8" height="47.9" rx="2" />
+<rect class="f1" x="485.1" y="230.0" width="75.8" height="50.0" rx="2" />
+<rect class="f1" x="568.9" y="232.1" width="71.8" height="47.9" rx="2" />
+<rect class="f1" x="648.6" y="238.4" width="59.8" height="41.6" rx="2" />
+<rect class="f1" x="716.4" y="248.9" width="39.9" height="31.1" rx="2" />
+<rect class="f1" x="764.2" y="257.4" width="23.9" height="22.6" rx="2" />
+<rect class="f1" x="796.1" y="263.7" width="15.9" height="16.3" rx="2" />
+<rect class="f1" x="820.1" y="267.9" width="15.9" height="12.1" rx="2" />
+<text class="small t3" x="210.0" y="298.0" text-anchor="start" xml:space="preserve" >kernel boundary = barrier for every angle and group at once; gaps = launch overhead (graph: ~1.7 µs less each)</text>
+<text class="lab b" x="24.0" y="342.0" text-anchor="start" xml:space="preserve" >dagqueue</text>
+<text class="small t2" x="24.0" y="358.0" text-anchor="start" xml:space="preserve" >one persistent launch</text>
+<rect class="f2" x="210.0" y="330.0" width="538.4" height="30.0" rx="3" />
+<text class="lab" x="220.0" y="350.0" text-anchor="start" xml:space="preserve" style="fill:#ffffff">elements start as soon as all their upwind neighbors are done; no global barriers</text>
+<text class="small t3" x="210.0" y="380.0" text-anchor="start" xml:space="preserve" >costs: a queue pop, up to 3 atomic count updates and a push per (angle, element)</text>
+</svg>

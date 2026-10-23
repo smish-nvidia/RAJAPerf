@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="Speedup over the original RAJA_CUDA kernel by mesh size">
+<title>Speedup over the original RAJA_CUDA kernel by mesh size</title>
+<style>
+svg{--bg:#fcfcfb;--fg:#0b0b0b;--fg2:#52514e;--fg3:#7a7975;--grid:#e6e5e1;--box:#efeeea;--line:#b9b8b2;
+--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--hi:#e34948}
+@media (prefers-color-scheme:dark){svg{--bg:#1a1a19;--fg:#f0efec;--fg2:#c3c2b7;--fg3:#9a998f;--grid:#33322f;--box:#292927;--line:#5a5954;
+--s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--hi:#e66767}}
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:var(--fg);font-size:13px}
+.t2{fill:var(--fg2)}.t3{fill:var(--fg3)}.title{font-size:16px;font-weight:600}.sub{font-size:13px;fill:var(--fg2)}
+.lab{font-size:12px}.small{font-size:11px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.b{font-weight:600}
+.bg{fill:var(--bg)}.box{fill:var(--box)}.grid{stroke:var(--grid);stroke-width:1}.ax{stroke:var(--line);stroke-width:1}
+.f1{fill:var(--s1)}.f2{fill:var(--s2)}.f3{fill:var(--s3)}.f4{fill:var(--s4)}.fhi{fill:var(--hi)}.ffg2{fill:var(--fg2)}
+.w1{fill:var(--s1);fill-opacity:.16}.w2{fill:var(--s2);fill-opacity:.16}.w3{fill:var(--s3);fill-opacity:.16}.w4{fill:var(--s4);fill-opacity:.16}
+.s1{stroke:var(--s1)}.s2{stroke:var(--s2)}.s3{stroke:var(--s3)}.s4{stroke:var(--s4)}.shi{stroke:var(--hi)}
+.ln{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.edge{fill:none;stroke:var(--line);stroke-width:1}.edge2{fill:none;stroke:var(--fg2);stroke-width:1.5}
+.ring{stroke:var(--bg);stroke-width:2}.hollow{fill:var(--bg);stroke-width:2}
+.arrow{stroke:var(--fg2);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+.arrowhi{stroke:var(--hi);stroke-width:1.5;fill:none;marker-end:url(#ahhi)}
+</style>
+<defs>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="ffg2"/></marker>
+<marker id="ahhi" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" class="fhi"/></marker>
+</defs>
+<rect class="bg" x="0" y="0" width="860" height="400" rx="8"/>
+<text class="title" x="24.0" y="32.0" text-anchor="start" xml:space="preserve" >Speedup over the original RAJA_CUDA kernel</text>
+<text class="sub" x="24.0" y="52.0" text-anchor="start" xml:space="preserve" >unroll_64_min_blocks_per_sm_5 = 1×; higher is better. A100, 72 angles, 16 groups, min of 3 runs.</text>
+<rect class="f4" x="24.0" y="70.0" width="12.0" height="12.0" rx="3" />
+<text class="lab t2" x="42.0" y="81.0" text-anchor="start" xml:space="preserve" >original Base_CUDA unroll_64</text>
+<rect class="f3" x="271.6" y="70.0" width="12.0" height="12.0" rx="3" />
+<text class="lab t2" x="289.6" y="81.0" text-anchor="start" xml:space="preserve" >coop_256</text>
+<rect class="f2" x="375.2" y="70.0" width="12.0" height="12.0" rx="3" />
+<text class="lab t2" x="393.2" y="81.0" text-anchor="start" xml:space="preserve" >dagqueue_256</text>
+<rect class="f1" x="507.6" y="70.0" width="12.0" height="12.0" rx="3" />
+<text class="lab t2" x="525.6" y="81.0" text-anchor="start" xml:space="preserve" >daggraph_256</text>
+<line class="grid" x1="70.0" y1="340.0" x2="836.0" y2="340.0"/>
+<text class="lab t3" x="60.0" y="344.0" text-anchor="end" xml:space="preserve" >0×</text>
+<line class="grid" x1="70.0" y1="301.7" x2="836.0" y2="301.7"/>
+<text class="lab t3" x="60.0" y="305.7" text-anchor="end" xml:space="preserve" >1×</text>
+<line class="grid" x1="70.0" y1="263.3" x2="836.0" y2="263.3"/>
+<text class="lab t3" x="60.0" y="267.3" text-anchor="end" xml:space="preserve" >2×</text>
+<line class="grid" x1="70.0" y1="225.0" x2="836.0" y2="225.0"/>
+<text class="lab t3" x="60.0" y="229.0" text-anchor="end" xml:space="preserve" >3×</text>
+<line class="grid" x1="70.0" y1="186.7" x2="836.0" y2="186.7"/>
+<text class="lab t3" x="60.0" y="190.7" text-anchor="end" xml:space="preserve" >4×</text>
+<line class="grid" x1="70.0" y1="148.3" x2="836.0" y2="148.3"/>
+<text class="lab t3" x="60.0" y="152.3" text-anchor="end" xml:space="preserve" >5×</text>
+<line class="grid" x1="70.0" y1="110.0" x2="836.0" y2="110.0"/>
+<text class="lab t3" x="60.0" y="114.0" text-anchor="end" xml:space="preserve" >6×</text>
+<path class="f4" d="M146.7,340.0 V299.1 Q146.7,295.1 150.7,295.1 H166.7 Q170.7,295.1 170.7,299.1 V340.0 Z"/>
+<path class="f3" d="M172.7,340.0 V271.0 Q172.7,267.0 176.7,267.0 H192.7 Q196.7,267.0 196.7,271.0 V340.0 Z"/>
+<path class="f2" d="M198.7,340.0 V254.8 Q198.7,250.8 202.7,250.8 H218.7 Q222.7,250.8 222.7,254.8 V340.0 Z"/>
+<path class="f1" d="M224.7,340.0 V201.3 Q224.7,197.3 228.7,197.3 H244.7 Q248.7,197.3 248.7,201.3 V340.0 Z"/>
+<text class="lab b" x="236.7" y="191.3" text-anchor="middle" xml:space="preserve" >3.7×</text>
+<text class="lab t2" x="197.7" y="362.0" text-anchor="middle" xml:space="preserve" >5³ mesh</text>
+<path class="f4" d="M402.0,340.0 V296.8 Q402.0,292.8 406.0,292.8 H422.0 Q426.0,292.8 426.0,296.8 V340.0 Z"/>
+<path class="f3" d="M428.0,340.0 V223.6 Q428.0,219.6 432.0,219.6 H448.0 Q452.0,219.6 452.0,223.6 V340.0 Z"/>
+<path class="f2" d="M454.0,340.0 V189.2 Q454.0,185.2 458.0,185.2 H474.0 Q478.0,185.2 478.0,189.2 V340.0 Z"/>
+<path class="f1" d="M480.0,340.0 V177.8 Q480.0,173.8 484.0,173.8 H500.0 Q504.0,173.8 504.0,177.8 V340.0 Z"/>
+<text class="lab b" x="492.0" y="167.8" text-anchor="middle" xml:space="preserve" >4.3×</text>
+<text class="lab t2" x="453.0" y="362.0" text-anchor="middle" xml:space="preserve" >16³ mesh</text>
+<path class="f4" d="M657.3,340.0 V297.0 Q657.3,293.0 661.3,293.0 H677.3 Q681.3,293.0 681.3,297.0 V340.0 Z"/>
+<path class="f3" d="M683.3,340.0 V219.8 Q683.3,215.8 687.3,215.8 H703.3 Q707.3,215.8 707.3,219.8 V340.0 Z"/>
+<path class="f2" d="M709.3,340.0 V188.3 Q709.3,184.3 713.3,184.3 H729.3 Q733.3,184.3 733.3,188.3 V340.0 Z"/>
+<path class="f1" d="M735.3,340.0 V164.6 Q735.3,160.6 739.3,160.6 H755.3 Q759.3,160.6 759.3,164.6 V340.0 Z"/>
+<text class="lab b" x="747.3" y="154.6" text-anchor="middle" xml:space="preserve" >4.7×</text>
+<text class="lab t2" x="708.3" y="362.0" text-anchor="middle" xml:space="preserve" >32³ mesh</text>
+<line class="ax" x1="70.0" y1="301.7" x2="836.0" y2="301.7"/>
+<text class="small t3" x="24.0" y="384.0" text-anchor="start" xml:space="preserve" >Exact times for every variant are in the results table.</text>
+</svg>
