@@ -146,7 +146,18 @@ void FEMSWEEP::setUp(VariantID vid, size_t RAJAPERF_UNUSED_ARG(tune_idx))
   m_meshgen->Setup();
 
   allocAndInitDataRandValue (m_Bdat     , m_Blen      , vid);
-  allocAndInitDataRandValue (m_Adat     , m_Alen      , vid);
+  {
+    // diagonally dominant A, see femsweep_A_diag_shift in FEMSWEEP.hpp
+    auto a_A = allocDataForInit(m_Adat, m_Alen, vid);
+    detail::initDataRandValue(m_Adat, m_Alen);
+    for (Index_type ea = 0; ea < m_ne * m_na; ++ea)
+    {
+      for (Index_type i = 0; i < ND; ++i)
+      {
+        m_Adat[i + i * ND + ea * ND * ND] += femsweep_A_diag_shift;
+      }
+    }
+  }
   allocAndInitDataRandValue (m_Fdat     , m_Flen      , vid);
   allocAndInitDataRandValue (m_Sgdat    , m_Sglen     , vid);
   allocAndInitDataRandValue (m_M0dat    , m_M0len     , vid);

@@ -21,9 +21,8 @@
 ///   Index_type s_nehp_done = 0;
 ///   Real_type A[ND*ND];
 //    Real_type b[ND];
-///   // This factor helps maintain stability in the solution of the matrix solve
-///   // by eliminating the perturbation of the right-hand side.
-///   Real_type Ffactor = fmax(sin(Adat[order_r[a*ne]*ND*ND + a*ne*ND*ND]) - 2.0, 0.0);
+///   // Scale of the upwind face coupling (see femsweep_Ffactor below).
+///   const Real_type Ffactor = femsweep_Ffactor;
 ///   for (Index_type hp = 0; hp < nhp; ++hp) // loop over hyperplanes
 ///   {
 ///      // number of element in this hyperplane
@@ -60,11 +59,9 @@
 ///                  const Index_type dis = s == 0 ? idx2[ffi] : idx1[ffi];
 ///                  // Fdat : 4 x 4 x 2 x nf_int x na
 ///                  // Note: s ^ 1 == 1 if s == 0, and s ^ 1 == 0 if s == 1.
-///                  // The solution remains bounded when matrices and indirection arrays from a
-///                  // finite element discretrization are used, but randomly generating matrix 
-///                  // data can result in exponential growth instead. A specific trick of 
-///                  // multiplying by zero, without the compiler optimizing it away, is 
-///                  // necessary to prevent unbounded growth and avoid computing NaNs.
+///                  // Randomly generated matrix data can make the solution grow
+///                  // exponentially along the sweep; femsweep_Ffactor and the
+///                  // diagonal shift of A (femsweep_A_diag_shift) keep it bounded.
 ///                  F += Ffactor * Fdat[i + j * FDS + (s ^ 1) * FDS * FDS + f * 2 * FDS * FDS + a * sharedinteriorfaces * 2 * FDS * FDS] * Xdat[dis + g * ND * ne + a * ng * ND * ne];
 ///               } // i
 ///               b[djs % ND] -= F;
@@ -126,10 +123,27 @@ constexpr RAJA::Index_type FDS = 4;  // number of DOFs per face
 #define FEMSWEEP_KERNEL_SETUP \
   const Index_type nhp = nhpaa_r[a]; \
   const Index_type ohp = ohpaa_r[a]; \
-  Real_type Ffactor = fmax(sin(Adat[order_r[a*ne]*ND*ND + a*ne*ND*ND]) - 2.0, 0.0);
+  const Real_type Ffactor = femsweep_Ffactor;
 
 namespace rajaperf
 {
+
+// The input data is random, so the sweep is kept stable by construction:
+//
+//  - setUp adds femsweep_A_diag_shift to the diagonal of every A. Entries of
+//    A, M0 and sigma are in [0, 1], so K = A + sigma*M0 has off-diagonal row
+//    sums <= 2*(ND-1) and diagonal >= 2*ND: strictly diagonally dominant with
+//    margin >= 2, hence ||K^-1||_inf <= 1/2 (and LU without pivoting is stable).
+//  - An element row receives at most 3 incoming faces x FDS = 12 coupling
+//    terms, each Ffactor * F * x with F in [0, 1]. Upwind values are thus
+//    amplified by at most 12 * Ffactor / 2 = 0.6 per hyperplane, so the
+//    solution stays bounded for any mesh size.
+//
+// Ffactor used to be fmax(sin(.) - 2, 0), i.e. exactly 0, which made the
+// face terms (and therefore the face indexing and the sweep ordering)
+// invisible to the checksum.
+constexpr Real_type femsweep_Ffactor = 0.1;
+constexpr Real_type femsweep_A_diag_shift = 2.0 * ND;
 
 #define FEMSWEEP_ROLL
 #define FEMSWEEP_UNROLL RAJA_UNROLL
