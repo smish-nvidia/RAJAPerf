@@ -383,6 +383,21 @@ class RunParams;
 namespace apps
 {
 
+// Everything one sweep reads and writes, so a sweep can be launched without
+// the FEMSWEEP object (FEMSWEEP-CudaLaunch.hpp, femsweep-bench.cpp).
+struct FemsweepData {
+  Real_ptr Bdat, Adat, Fdat, Xdat, Sgdat, M0dat;
+  Index_type ne, na, ng, sharedinteriorfaces, hplanes, Xlen;
+  Index_ptr nhpaa_r, ohpaa_r, phpaa_r, order_r;
+  Index_ptr AngleElem2FaceType, elem_to_faces, F_g2l, idx1, idx2;
+  // precomputed per-(element, face) connectivity for the experimental CUDA
+  // kernels, see femsweepFaceTable
+  const int * faces = nullptr;
+};
+
+// schedulers of the combined-view sweep, see FemsweepDag (FEMSWEEP-CudaLaunch.hpp)
+enum class FemsweepDagMode { levels, graph, queue };
+
 class FEMSWEEP : public KernelBase
 {
 public:
@@ -396,9 +411,18 @@ public:
   void updateChecksum(VariantID vid, size_t tune_idx);
   void tearDown(VariantID vid, size_t tune_idx);
 
+  // device data of the current setUp(), for launchers outside this class
+  FemsweepData data() const {
+    return {m_Bdat, m_Adat, m_Fdat, m_Xdat, m_Sgdat, m_M0dat,
+            m_ne, m_na, m_ng, m_sharedinteriorfaces, m_hplanes, m_Xlen,
+            m_nhpaa_r, m_ohpaa_r, m_phpaa_r, m_order_r,
+            m_AngleElem2FaceType, m_elem_to_faces, m_F_g2l, m_idx1, m_idx2};
+  }
+
   void defineSeqVariantTunings();
   void defineOpenMPVariantTunings();
   void defineCudaVariantTunings();
+  void defineCudaExperimentalTunings();
   void defineHipVariantTunings();
 
   template < bool unroll >
@@ -408,6 +432,13 @@ public:
 
   template < size_t block_size, bool unroll, size_t min_blocks_per_sm >
   void runCudaVariantImpl(VariantID vid);
+#if defined(RAJA_ENABLE_CUDA)
+  // experimental tunings: time one launcher (see FEMSWEEP-CudaLaunch.hpp)
+  template < size_t block_size, void (*launch)(const FemsweepData &, cudaStream_t) >
+  void runCudaLaunch(VariantID vid);
+  template < FemsweepDagMode mode, bool group_inner = false >
+  void runCudaDag(VariantID vid);
+#endif
   template < size_t block_size, bool unroll >
   void runHipVariantImpl(VariantID vid);
 

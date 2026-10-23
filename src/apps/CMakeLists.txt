@@ -46,6 +46,9 @@ blt_add_library(
           FEMSWEEP.cpp
           FEMSWEEPMeshGen.cpp
           FEMSWEEP-Cuda.cpp
+          FEMSWEEP-CudaExp.cpp
+          FEMSWEEP-CudaExpCoop.cpp
+          FEMSWEEP-CudaExpDag.cpp
           FEMSWEEP-Hip.cpp
           FEMSWEEP-Seq.cpp
           FEMSWEEP-OMP.cpp

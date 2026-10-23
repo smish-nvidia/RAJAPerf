@@ -310,4 +310,13 @@ install( TARGETS raja-perf.exe
 install( TARGETS ${RAJA_PERFSUITE_LIBS}
          LIBRARY DESTINATION lib
        )
+
+if (ENABLE_CUDA)
+blt_add_executable(
+  NAME femsweep-bench.exe
+  SOURCES femsweep-bench.cpp
+  INCLUDES ${PROJECT_BINARY_DIR}/include
+  DEPENDS_ON ${RAJA_PERFSUITE_EXECUTABLE_DEPENDS}
+  )
+endif()
 endif()
