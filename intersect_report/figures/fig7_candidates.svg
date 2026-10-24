@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560">
+<defs><marker id="arr-1a202c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a202c"/></marker><marker id="arr-718096" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#718096"/></marker><marker id="arr-a0aec0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a0aec0"/></marker><marker id="arr-2b6cb0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker><marker id="arr-c05621" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c05621"/></marker><marker id="arr-2f855a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/></marker><marker id="arr-c53030" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c53030"/></marker><marker id="arr-6b46c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b46c1"/></marker></defs>
+<rect width="760" height="560" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+<polygon points="156.0,366.3 232.8,333.9 193.3,271.0 123.6,289.6" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="232.8,333.9 309.6,301.4 299.5,237.3 193.3,271.0" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="309.6,301.4 386.3,269.0 353.9,192.2 299.5,237.3" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="123.6,289.6 193.3,271.0 168.1,167.9 91.1,212.8" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="193.3,271.0 299.5,237.3 238.9,174.5 168.1,167.9" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="299.5,237.3 353.9,192.2 321.4,115.4 238.9,174.5" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="91.1,212.8 168.1,167.9 135.4,103.6 58.7,136.0" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="168.1,167.9 238.9,174.5 212.2,71.1 135.4,103.6" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="238.9,174.5 321.4,115.4 289.0,38.7 212.2,71.1" fill="none" fill-opacity="1.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="65.0,310.0 127.5,310.0 127.9,230.6 65.0,247.5" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="127.5,310.0 190.0,310.0 176.7,230.7 127.9,230.6" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="190.0,310.0 252.5,310.0 245.4,250.4 176.7,230.7" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="252.5,310.0 315.0,310.0 315.0,247.5 245.4,250.4" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="65.0,247.5 127.9,230.6 139.8,188.4 65.0,185.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="127.9,230.6 176.7,230.7 191.9,202.7 139.8,188.4" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="176.7,230.7 245.4,250.4 262.0,183.6 191.9,202.7" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="245.4,250.4 315.0,247.5 315.0,185.0 262.0,183.6" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="65.0,185.0 139.8,188.4 121.1,111.7 65.0,122.5" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="139.8,188.4 191.9,202.7 182.6,124.2 121.1,111.7" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="191.9,202.7 262.0,183.6 238.8,126.1 182.6,124.2" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="262.0,183.6 315.0,185.0 315.0,122.5 238.8,126.1" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="65.0,122.5 121.1,111.7 127.5,60.0 65.0,60.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="121.1,111.7 182.6,124.2 190.0,60.0 127.5,60.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="182.6,124.2 238.8,126.1 252.5,60.0 190.0,60.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="238.8,126.1 315.0,122.5 315.0,60.0 252.5,60.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="123.6,289.6 193.3,271.0 168.1,167.9 91.1,212.8" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="144.0" y="240.3" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">b=3</text>
+<polygon points="193.3,271.0 299.5,237.3 238.9,174.5 168.1,167.9" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="225.0" y="217.7" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">b=4</text>
+<polygon points="91.1,212.8 168.1,167.9 135.4,103.6 58.7,136.0" fill="#c05621" fill-opacity="0.1" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="113.3" y="160.1" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">b=6</text>
+<polygon points="127.9,230.6 176.7,230.7 191.9,202.7 139.8,188.4" fill="#2b6cb0" fill-opacity="0.35" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="127.9,230.7 191.9,230.7 191.9,188.4 127.9,188.4" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<text x="159.1" y="218.1" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a=5</text>
+<text x="190.0" y="350.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">BVH query: the box of A's quad a=5 (dashed) overlaps</text>
+<text x="190.0" y="366.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">the boxes of B's quads 3, 4, 6 (shaded: really overlap)</text>
+<line x1="445.0" y1="310.0" x2="445.0" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="310.0" x2="695.0" y2="310.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="486.7" y1="310.0" x2="486.7" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="268.3" x2="695.0" y2="268.3" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="528.3" y1="310.0" x2="528.3" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="226.7" x2="695.0" y2="226.7" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="570.0" y1="310.0" x2="570.0" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="185.0" x2="695.0" y2="185.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="611.7" y1="310.0" x2="611.7" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="143.3" x2="695.0" y2="143.3" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="653.3" y1="310.0" x2="653.3" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="101.7" x2="695.0" y2="101.7" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="695.0" y1="310.0" x2="695.0" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<line x1="445.0" y1="60.0" x2="695.0" y2="60.0" stroke="#c05621" stroke-opacity="0.6" stroke-width="1" stroke-linecap="round"/>
+<polygon points="536.0,366.3 593.6,342.0 563.1,268.7 511.7,308.7" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="593.6,342.0 651.2,317.6 608.0,249.8 563.1,268.7" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="651.2,317.6 708.7,293.3 679.0,241.1 608.0,249.8" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="708.7,293.3 766.3,269.0 742.0,211.4 679.0,241.1" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="511.7,308.7 563.1,268.7 557.6,225.2 487.4,251.2" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="563.1,268.7 608.0,249.8 611.1,218.1 557.6,225.2" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="608.0,249.8 679.0,241.1 668.3,173.1 611.1,218.1" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="679.0,241.1 742.0,211.4 717.6,153.8 668.3,173.1" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="487.4,251.2 557.6,225.2 510.5,161.8 463.0,193.6" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="557.6,225.2 611.1,218.1 572.0,149.4 510.5,161.8" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="611.1,218.1 668.3,173.1 624.5,129.3 572.0,149.4" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="668.3,173.1 717.6,153.8 693.3,96.3 624.5,129.3" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="463.0,193.6 510.5,161.8 496.3,111.7 438.7,136.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="510.5,161.8 572.0,149.4 553.8,87.4 496.3,111.7" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="572.0,149.4 624.5,129.3 611.4,63.0 553.8,87.4" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="624.5,129.3 693.3,96.3 669.0,38.7 611.4,63.0" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="0.6" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="528.3,310.0 570.0,310.0 570.0,268.3 528.3,268.3" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="539.3" y="279.3" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">2</text>
+<polygon points="570.0,310.0 611.7,310.0 611.7,268.3 570.0,268.3" fill="#c05621" fill-opacity="0.1" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="581.0" y="279.3" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">3</text>
+<polygon points="528.3,268.3 570.0,268.3 570.0,226.7 528.3,226.7" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="539.3" y="237.7" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">8</text>
+<polygon points="570.0,268.3 611.7,268.3 611.7,226.7 570.0,226.7" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="581.0" y="237.7" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">9</text>
+<polygon points="528.3,226.7 570.0,226.7 570.0,185.0 528.3,185.0" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="539.3" y="196.0" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">14</text>
+<polygon points="570.0,226.7 611.7,226.7 611.7,185.0 570.0,185.0" fill="#c05621" fill-opacity="0.3" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<text x="581.0" y="196.0" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">15</text>
+<polygon points="563.1,268.7 608.0,249.8 611.1,218.1 557.6,225.2" fill="#2b6cb0" fill-opacity="0.35" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="557.6,268.7 611.1,268.7 611.1,218.1 557.6,218.1" fill="none" fill-opacity="1.0" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="5 3"/>
+<text x="635.1" y="277.7" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a=5</text>
+<text x="570.0" y="350.0" font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#1a202c" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">cell_range on each axis: i = 2..3, j = 0..2</text>
+<text x="570.0" y="366.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">every cell b of the block is a candidate (shaded: really overlap)</text>
+<text x="20.0" y="400.0" font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">append_pairs, threads a=5 and a=6: one possible order</text>
+<rect x="20.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="33.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="33.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">1</text>
+<rect x="46.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="59.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="59.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">3</text>
+<rect x="72.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="85.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="85.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">4</text>
+<rect x="98.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="111.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="111.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">3</text>
+<rect x="124.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="137.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="137.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">4</text>
+<rect x="150.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="163.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="163.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">6</text>
+<rect x="176.0" y="408.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="189.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="189.0" y="437.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">5</text>
+<text x="20.0" y="470.0" font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">thrust::sort by (a, b): the order the moments come out in</text>
+<rect x="20.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="33.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="33.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">3</text>
+<rect x="46.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="59.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="59.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">4</text>
+<rect x="72.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="85.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="85.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">6</text>
+<rect x="98.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="111.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="111.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">1</text>
+<rect x="124.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="137.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="137.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">3</text>
+<rect x="150.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="163.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="163.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">4</text>
+<rect x="176.0" y="478.0" width="26.0" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="189.0" y="492.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="189.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">5</text>
+<text x="20.0" y="535.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#718096" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">top: a (A's quad), bottom: b (B's)</text>
+<text x="400.0" y="400.0" font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">count_cells, exclusive_scan</text>
+<text x="494.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a=4</text>
+<rect x="470.0" y="428.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="494.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">6</text>
+<rect x="470.0" y="450.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="494.0" y="464.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">18</text>
+<text x="552.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a=5</text>
+<rect x="528.0" y="428.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="552.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">6</text>
+<rect x="528.0" y="450.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="552.0" y="464.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">24</text>
+<text x="610.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a=6</text>
+<rect x="586.0" y="428.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="610.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">9</text>
+<rect x="586.0" y="450.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="610.0" y="464.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">30</text>
+<text x="668.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">a=7</text>
+<rect x="644.0" y="428.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="668.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">3</text>
+<rect x="644.0" y="450.0" width="48.0" height="20.0" rx="0" fill="#1a202c" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="668.0" y="464.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a202c" text-anchor="middle">39</text>
+<text x="462.0" y="442.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#1a202c" text-anchor="end" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">counts</text>
+<text x="462.0" y="464.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#1a202c" text-anchor="end" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">offsets</text>
+<text x="400.0" y="494.0" font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">fill_cells: pairs[24..38]</text>
+<rect x="400.0" y="502.0" width="22.7" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="411.3" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="411.3" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">2</text>
+<rect x="422.7" y="502.0" width="22.7" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="434.0" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="434.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">3</text>
+<rect x="445.3" y="502.0" width="22.7" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="456.7" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="456.7" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">8</text>
+<rect x="468.0" y="502.0" width="22.7" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="479.3" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="479.3" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">9</text>
+<rect x="490.7" y="502.0" width="22.7" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="502.0" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="502.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">14</text>
+<rect x="513.3" y="502.0" width="22.7" height="34.0" rx="0" fill="#2b6cb0" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="524.7" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">5</text>
+<text x="524.7" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">15</text>
+<rect x="536.0" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="547.3" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="547.3" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">9</text>
+<rect x="558.7" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="570.0" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="570.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">10</text>
+<rect x="581.3" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="592.7" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="592.7" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">11</text>
+<rect x="604.0" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="615.3" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="615.3" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">15</text>
+<rect x="626.7" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="638.0" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="638.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">16</text>
+<rect x="649.3" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="660.7" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="660.7" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">17</text>
+<rect x="672.0" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="683.3" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="683.3" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">21</text>
+<rect x="694.7" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="706.0" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="706.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">22</text>
+<rect x="717.3" y="502.0" width="22.7" height="34.0" rx="0" fill="#6b46c1" fill-opacity="0.08" stroke="#a0aec0" stroke-width="1"/>
+<text x="728.7" y="516.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#2b6cb0" text-anchor="middle">6</text>
+<text x="728.7" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c05621" text-anchor="middle">23</text>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="610" viewBox="0 0 760 610">
+<defs><marker id="arr-1a202c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a202c"/></marker><marker id="arr-718096" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#718096"/></marker><marker id="arr-a0aec0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a0aec0"/></marker><marker id="arr-2b6cb0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker><marker id="arr-c05621" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c05621"/></marker><marker id="arr-2f855a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/></marker><marker id="arr-c53030" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c53030"/></marker><marker id="arr-6b46c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b46c1"/></marker></defs>
+<rect width="760" height="610" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+<text x="195.0" y="26.0" font-family="Menlo, Consolas, monospace" font-size="13.5" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="bold">resolve_hex_hex_gpu(A, B)</text>
+<text x="565.0" y="26.0" font-family="Menlo, Consolas, monospace" font-size="13.5" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="bold">resolve_hex_cartesian_gpu(A, B)</text>
+<rect x="20.0" y="38.0" width="350.0" height="40.0" rx="6" fill="#2b6cb0" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="195.0" y="55.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle">A, B: hex meshes (vertices, 8 indices per hex),</text>
+<text x="195.0" y="70.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle">copied to the device (DeviceMesh)</text>
+<rect x="390.0" y="38.0" width="350.0" height="40.0" rx="6" fill="#c05621" fill-opacity="0.04" stroke="#a0aec0" stroke-width="1.2"/>
+<text x="565.0" y="55.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle">A: hex mesh, copied to the device. B: a Cartesian</text>
+<text x="565.0" y="70.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="middle">mesh: lo, hi and n[3] only (passed by value)</text>
+<text x="20.0" y="100.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="bold">1  Candidate pairs: elements whose bounding boxes overlap</text>
+<rect x="20.0" y="110.0" width="350.0" height="178.0" rx="6" fill="#2b6cb0" fill-opacity="0.07" stroke="#2b6cb0" stroke-width="1.3"/>
+<text x="32.0" y="132.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#2b6cb0" text-anchor="start" font-weight="bold">compute_bounds</text>
+<text x="360.0" y="132.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">build</text>
+<text x="44.0" y="148.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a thread per hex of B: its box</text>
+<text x="32.0" y="171.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#2b6cb0" text-anchor="start" font-weight="bold">cuBQL::cuda::radixBuilder</text>
+<text x="360.0" y="171.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">build</text>
+<text x="44.0" y="187.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a BVH over B's boxes (Morton codes)</text>
+<text x="32.0" y="210.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#2b6cb0" text-anchor="start" font-weight="bold">append_pairs</text>
+<text x="360.0" y="210.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">traversal</text>
+<text x="44.0" y="226.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a thread per hex of A walks the BVH, appending</text>
+<text x="44.0" y="241.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">(a, b) with an atomic counter, in any order</text>
+<text x="32.0" y="264.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#2b6cb0" text-anchor="start" font-weight="bold">thrust::sort</text>
+<text x="360.0" y="264.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">sort</text>
+<text x="44.0" y="280.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">by the 64-bit key (a &lt;&lt; 32 | b)</text>
+<rect x="390.0" y="110.0" width="350.0" height="178.0" rx="6" fill="#c05621" fill-opacity="0.07" stroke="#c05621" stroke-width="1.3"/>
+<text x="402.0" y="132.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#c05621" text-anchor="start" font-weight="bold">count_cells</text>
+<text x="730.0" y="132.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">traversal</text>
+<text x="414.0" y="148.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a thread per hex of A: the cells its box spans,</text>
+<text x="414.0" y="163.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">from cell_range on each axis: their number</text>
+<text x="402.0" y="186.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#c05621" text-anchor="start" font-weight="bold">thrust::exclusive_scan</text>
+<text x="730.0" y="186.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">traversal</text>
+<text x="414.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">counts -&gt; offsets (offsets[nA]: the total)</text>
+<text x="402.0" y="225.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#c05621" text-anchor="start" font-weight="bold">fill_cells</text>
+<text x="730.0" y="225.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">traversal</text>
+<text x="414.0" y="241.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a thread per hex of A writes its (a, b) from</text>
+<text x="414.0" y="256.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">offsets[a] on, in order of cell index</text>
+<line x1="195.0" y1="288.0" x2="195.0" y2="304.0" stroke="#2b6cb0" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arr-2b6cb0)"/>
+<line x1="565.0" y1="288.0" x2="565.0" y2="304.0" stroke="#c05621" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arr-c05621)"/>
+<rect x="130.0" y="306.0" width="500.0" height="26.0" rx="13" fill="#1a202c" fill-opacity="0.05" stroke="#1a202c" stroke-width="1"/>
+<text x="380.0" y="323.0" font-family="Menlo, Consolas, monospace" font-size="12" fill="#1a202c" text-anchor="middle">pairs[n]: (a, b), sorted by a, then b</text>
+<text x="20.0" y="366.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="bold">2  Moments: a warp box-tests its items, queues those that pass, and integrates the queue</text>
+<rect x="20.0" y="376.0" width="350.0" height="116.0" rx="6" fill="#2b6cb0" fill-opacity="0.07" stroke="#2b6cb0" stroke-width="1.3"/>
+<text x="32.0" y="398.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#2b6cb0" text-anchor="start" font-weight="bold">hex_projection_moments</text>
+<text x="360.0" y="398.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">moments</text>
+<text x="44.0" y="414.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">24 triangles per hex: a warp per pair,</text>
+<text x="44.0" y="429.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">its 24 x 24 = 576 items (T of A, S of B)</text>
+<text x="32.0" y="452.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#2b6cb0" text-anchor="start" font-weight="bold">hex_projection_moments_multi</text>
+<text x="360.0" y="452.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">moments</text>
+<text x="44.0" y="468.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">12 triangles per hex (INTSC_HEXHEX's subzones):</text>
+<text x="44.0" y="483.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a warp per 4 pairs, their 4 x 144 items</text>
+<rect x="390.0" y="376.0" width="350.0" height="116.0" rx="6" fill="#c05621" fill-opacity="0.07" stroke="#c05621" stroke-width="1.3"/>
+<text x="402.0" y="398.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#c05621" text-anchor="start" font-weight="bold">cell_projection_moments</text>
+<text x="730.0" y="398.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="end">moments</text>
+<text x="414.0" y="414.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">a warp per hex of A, over its cells 16 at a time:</text>
+<text x="414.0" y="429.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a202c" text-anchor="start">24 items (triangle of A, cell) per cell</text>
+<line x1="195.0" y1="492.0" x2="195.0" y2="508.0" stroke="#2b6cb0" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arr-2b6cb0)"/>
+<line x1="565.0" y1="492.0" x2="565.0" y2="508.0" stroke="#c05621" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arr-c05621)"/>
+<rect x="130.0" y="510.0" width="500.0" height="26.0" rx="13" fill="#1a202c" fill-opacity="0.05" stroke="#1a202c" stroke-width="1"/>
+<text x="380.0" y="527.0" font-family="Menlo, Consolas, monospace" font-size="12" fill="#1a202c" text-anchor="middle">overlaps[n]: zero unless volume &gt; rel_tol * min(vol_a, vol_b)</text>
+<text x="20.0" y="566.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="bold">3  Drop the empty ones</text>
+<text x="30.0" y="592.0" font-family="Menlo, Consolas, monospace" font-size="12.5" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke" font-weight="bold">thrust::remove_if(volume == 0)</text>
+<text x="258.0" y="592.0" font-family="Menlo, Consolas, monospace" font-size="11" fill="#718096" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">compact</text>
+<text x="320.0" y="592.0" font-family="Menlo, Consolas, monospace" font-size="11.5" fill="#1a202c" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">stable: still sorted by pair; then copied to the host as std::vector&lt;Overlap&gt;</text>
+</svg>
