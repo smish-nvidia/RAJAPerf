@@ -126,6 +126,7 @@ public:
 
   template < Size_type block_size >
   void runCudaVariantImpl(VariantID vid);
+  void runCudaVariantProjection(VariantID vid);  // the projection method (INTSC_HEXRECT-CudaProjection.cpp)
   template < Size_type block_size >
   void runHipVariantImpl(VariantID vid);
 

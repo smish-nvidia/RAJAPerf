@@ -207,7 +207,26 @@ void INTSC_HEXHEX::runCudaVariantImpl(VariantID vid)
   }
 }
 
-RAJAPERF_GPU_BLOCK_SIZE_TUNING_DEFINE_BOILERPLATE(INTSC_HEXHEX, Cuda, Base_CUDA, Lambda_CUDA, RAJA_CUDA)
+void INTSC_HEXHEX::defineCudaVariantTunings()
+{
+  for (VariantID vid : {Base_CUDA, Lambda_CUDA, RAJA_CUDA}) {
+    seq_for(gpu_block_sizes_type{}, [&](auto block_size) {
+      if (run_params.numValidGPUBlockSize() == 0u ||
+          run_params.validGPUBlockSize(block_size)) {
+        if (block_size == 0u) {
+          addVariantTuning<&INTSC_HEXHEX::runCudaVariantImpl<block_size>>(
+              vid, "block_auto");
+        } else {
+          addVariantTuning<&INTSC_HEXHEX::runCudaVariantImpl<block_size>>(
+              vid, "block_"+std::to_string(block_size));
+        }
+      }
+    });
+  }
+
+  // The projection method (INTSC_HEXHEX-CudaProjection.cpp), with its own launch configuration.
+  addVariantTuning<&INTSC_HEXHEX::runCudaVariantProjection>(Base_CUDA, "projection");
+}
 
 } // end namespace apps
 } // end namespace rajaperf

@@ -58,11 +58,13 @@ blt_add_library(
           FIR-Sycl.cpp
           INTSC_HEXHEX.cpp
           INTSC_HEXHEX-Cuda.cpp
+          INTSC_HEXHEX-CudaProjection.cpp
           INTSC_HEXHEX-Hip.cpp
           INTSC_HEXHEX-Seq.cpp
           INTSC_HEXHEX-OMP.cpp
           INTSC_HEXRECT.cpp
           INTSC_HEXRECT-Cuda.cpp
+          INTSC_HEXRECT-CudaProjection.cpp
           INTSC_HEXRECT-Hip.cpp
           INTSC_HEXRECT-Seq.cpp
           INTSC_HEXRECT-OMP.cpp
