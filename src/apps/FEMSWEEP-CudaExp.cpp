@@ -1,4 +1,5 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+// Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 // Copyright (c) Lawrence Livermore National Security, LLC and other 
 // RAJA Project Developers. See top-level LICENSE and COPYRIGHT
 // files for dates and other details. No copyright assignment is required
