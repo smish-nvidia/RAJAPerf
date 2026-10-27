@@ -55,6 +55,7 @@ Unless they are links, file names below are tet_intersection's.
 5. [Stage 3: dropping the empty results](#5-stage-3-dropping-the-empty-results)
 6. [The CPU versions](#6-the-cpu-versions)
 7. [Where the time goes](#7-where-the-time-goes)
+8. [Lessons from the optimization passes](#8-lessons-from-the-optimization-passes)
 
 The figures are drawn by tet_intersection's `docs/projection/make_figures.py`
 (`python3 make_figures.py`):
@@ -443,3 +444,169 @@ on these kernels, kept or not, with its measurements) shows where it goes:
   - loading the corners, 14%;
   - setting up the triangles, 12%;
   - clipping, 35%.
+
+Section 8 explains how the kernels got here.
+
+## 8. Lessons from the optimization passes
+
+The kernels of section 4 are the result of many passes of profiling, trying an idea, and measuring
+it. tet_intersection's `docs/projection_optimization_log.md` records every idea tried,
+kept or not, so that none is tried twice. This section draws the lessons out of it, with the
+measurements that taught them.
+
+**How the passes were run:**
+- **Times** are each kernel's own GPU time, from Nsight Compute: the least of a benchmark's 10
+  launches, on an A100 with its clock locked at 1200 MHz. The benchmarks' event timers include
+  the host's launch time, and on this shared machine they swung by up to 3x.
+- **The benchmarks:**
+  - *subzones*: `raja_comparison --hexhex`, at jitters 0, 0.3 and 0.45;
+  - *hex*: `mesh_compare --hex 20 17`;
+  - *cart*: `mesh_compare --cart 40 60`;
+  - *hexrect*: `raja_comparison --hexrect`, at jitters 0 and 0.3.
+- **A change was kept only if it was faster and passed every check:**
+  - `hex_tests`: the partitions add up exactly;
+  - `mesh_compare`: the GPU agrees with the CPU;
+  - `raja_comparison` at three jitters: exact values, and agreement pair by pair.
+
+Changes to a filter also had to drop exactly the same items as before.
+
+Over the passes made at the locked clock, the moment kernels got 1.6–3.8 times faster:
+
+| benchmark | before clipping in place | now |
+| --- | ---: | ---: |
+| subzones, unjittered | 1.48 ms | 0.389 ms |
+| subzones, jitter 0.3 | 2.49 ms | 1.129 ms |
+| hex | 2.87 ms | 1.633 ms |
+| cart | 4.63 ms | 2.911 ms |
+| hexrect, unjittered | 3.31 ms | 1.949 ms |
+
+Before the clock was locked, the earlier passes had already taken the hex kernel from 17.8 ms (a
+thread per pair) to 2.6 ms (section 7 of
+tet_intersection's `docs/projection_moments.md`).
+
+### 8.1 Where the polygons live decides the rest
+
+Each lane clips a polygon of up to 9 vertices, and where that buffer lives mattered more than
+anything else.
+- **Local memory to shared memory** was the biggest single gain. In local memory, the 32 lanes'
+  buffers far exceeded L1, and the kernels waited on L2. Moving them took hex from 7.5 to 3.4 ms,
+  and cart from 14.8 to 6.0 ms.
+- **The cost was occupancy.** Shared memory then limited how many warps an SM could run, and every
+  later pass on memory was about winning warps back:
+  - **Vertices with only y and z** (heights come from the triangle's plane): hex 3.0 -> 2.6 ms,
+    cart 6.0 -> 5.0 ms.
+  - **Clipping in place,** one buffer per lane instead of two: 15–17% everywhere (for example,
+    hex 2.87 -> 2.38 ms, hexrect 3.31 -> 2.80 ms). Warps per SM went from 11 to 17, and registers
+    per lane from 108 to 96.
+  - **The `union` of figure 10:** the boxes and float corners share memory with the polygons. That
+    took a block from 8.5 to 7.1 KB (with 2 pairs per warp) and the SM from 17 to 20 blocks:
+    subzones 0.562 -> 0.528 ms.
+
+The same lesson killed ideas that looked good on their own:
+- **Two-pass integration** (clip, then integrate all the fan triangles 32 at a time) kept more lanes
+  busy (14.1 active instead of 12.8). But it took 14% more instructions and a block fewer per SM:
+  hexrect 4.47 -> 4.94 ms.
+- **Moving the hexes' volumes to shared memory** to free registers freed none. It still cost a
+  block per SM.
+
+### 8.2 Give lanes only items that add something
+
+The work queue of section 4.2 exists because most items add nothing (figure 8), and a lane holding
+one only waits for the others.
+- **A warp per pair, then queueing what passes the box test:** hex 17.8 -> 11.7 -> 7.5 ms.
+- **Triangles parallel to x never queued** (`never_queued`): in the unjittered INTSC_HEXRECT, 61% of
+  the items were such triangles. hexrect 4.6 -> 3.4 ms.
+- **Several pairs per warp when a pair has few items:**
+  - 2 subzone pairs per warp, sharing one queue: unjittered 1.23 -> 0.76 ms. (Jittered, the queue
+    already filled the rounds: 2.05 -> 2.04 ms.)
+  - 4 pairs later took the unjittered time from 0.529 to 0.434 ms.
+
+  This doesn't help when one pair already fills a warp: 2 pairs of 24-triangle hexes per warp were
+  slower (hex 2.38 -> 2.65 ms).
+- **A filter, only where it can shorten the queue:** `drop_empty` drops items whose projections are
+  separated before they take a lane. It took subzones from 1.759 to 1.635 ms at a jitter of 0.3,
+  and from 1.882 to 1.686 ms at 0.45.
+
+  The first version ran on every warp and cost 13% unjittered (0.636 -> 0.713 ms). A queue of one
+  round can't get any shorter, so the filter now runs only when there are more than 32 items.
+- **Not every filter pays.** An exact triangle-rectangle test when queueing, in the hex-cell kernel,
+  dropped 20% of items when jittered but saved nothing: hexrect stayed at 3.18 ms unjittered, and
+  6.12 ms jittered. Those items' polygons empty after a clip or two anyway.
+
+### 8.3 Keep the lanes together
+
+A warp runs its lanes in lockstep, so a branch some lanes take costs the others its time too.
+- **Branch-free tests:** the box test with its comparisons combined by `&`, not `&&`:
+  - subzones 0.434 -> 0.402 ms, cart 3.27 -> 3.16 ms;
+  - hex 1.875 -> 1.771 ms, where it was done in a later pass;
+  - `separated_yz` makes every test too.
+- **Early exits lost:**
+  - skipping clips that a triangle's corners already decide made nothing faster;
+  - the first filter's early-exit tests diverged.
+
+### 8.4 Only the clip loop's critical path counts, until the FP64 pipe fills up
+
+The profiles showed one thing setting the time: the chain of dependent operations in the clip loop,
+and how many lanes run it. Shortening that chain paid every time:
+
+| change (in [`projection.hpp`](../src/tet/projection.hpp)) | subzones, jitter 0.3 | hex | hexrect |
+| --- | ---: | ---: | ---: |
+| plane slopes once per triangle, in the setup, not per item | 2.036 -> 1.924 ms | 2.37 -> 2.28 ms | 2.80 -> 2.56 ms (unjittered) |
+| a reciprocal at edge crossings (`__drcp_rn`), not a division | 1.924 -> 1.839 ms | 2.28 -> 2.18 ms | |
+| the overrun check only where an edge writes 2 vertices | 1.839 -> 1.758 ms | | 2.52 -> 2.35 ms (unjittered) |
+| the reciprocal as `rcp.approx` and 3 FMAs (`detail::crossing`) | 1.631 -> 1.590 ms | 2.14 -> 2.07 ms | 4.81 -> 4.60 ms |
+| the first clip from registers: unrolled, its 3 distances independent | 1.590 -> 1.540 ms | 2.07 -> 1.98 ms | 4.60 -> 4.39 ms |
+| the clip loop's last edge peeled: no wrap-around select | 1.197 -> 1.129 ms | 1.745 -> 1.633 ms | 4.23 -> 3.89 ms |
+
+Hexrect times are at a jitter of 0.3 unless marked unjittered.
+
+**Work off that path barely mattered:**
+- Storing the corners already shifted to the local origin removed work from the setup, and changed
+  nothing (instructions -0.4% and +0.8%).
+- Hoisting the edge directions out of the clip was 2% slower: the compiler had already folded those
+  terms.
+- **Why:** with 14–16 warps per SM, setup work overlaps other warps' stalls.
+
+That changed once the clipping kept the FP64 pipe 70% busy (when jittered). From then on, *any*
+double-precision instruction counted, and moving work off the FP64 pipe paid:
+- **The box tests** on floats rounded outward (`outward_floats`), which also halves their
+  shared-memory reads: subzones 1.511 -> 1.411 ms, hex 1.98 -> 1.87 ms.
+- **The filter's separating-axis test** in floats (`separated_yz`): subzones 1.411 -> 1.332 ms at a
+  jitter of 0.3, 1.462 -> 1.368 ms at 0.45.
+
+Floats were only safe because both tests round conservatively:
+- the boxes are rounded outward, so the box test lets through every item the exact test would;
+- `separated_yz` decides only beyond a margin larger than its rounding error, so it drops only
+  items an exact test would drop.
+
+### 8.5 Measure the balance; don't predict it
+
+Several choices trade one resource for another, and which side wins changed as the kernels did:
+- **Pairs per warp.** 4 subzone pairs per warp were at first slower than 2 when jittered (2.27
+  against 2.04 ms): the extra shared memory cost too many warps. Once the polygons shared memory
+  with the boxes (section 8.1), 4 pairs took the unjittered time from 0.529 to 0.434 ms, and cost
+  nothing jittered.
+- **Fewer instructions, but slower:**
+  - Keeping S's boxes in registers for the box test cut instructions, but was slower (subzones
+    1.683 against 1.634 ms). The queue came out in T-major order, with fewer full rounds.
+- **Cheaper-looking, but slower:**
+  - Per-lane accumulators reduced once at the end cost more than one `add_by_key` per round when
+    unjittered (0.679 against 0.637 ms). The final reduction over 4 pairs' values outweighs the
+    scans of one round.
+- **The filter's second test.** Checking that T is below S at the corners paid in doubles. In
+  floats it cost more than it saved, so `separated_yz` is the only test left (subzones 1.332 ->
+  1.298 ms).
+
+### 8.6 What's left
+
+The latest profile (section 7) points at the remaining costs:
+- **Loading the corners** is 14% of the unjittered subzone kernel, stalled on global loads.
+  - Persistent warps that prefetch their next pairs' corners could hide that, worth about 10%
+    unjittered.
+  - With the registers at 124 of 128, the prefetch would probably go through `cp.async` into a
+    second buffer, at the cost of shared memory.
+- **Occupancy:** 16 one-warp blocks per SM, limited by registers and shared memory at once
+  (section 4.7). 20 would need at most 96 registers and 7.3 KB per block, for example polygons of
+  8 vertices rather than 9, and a tighter queue and slopes.
+- **A cheaper filter:** from edge lines computed once per triangle in the setup, for about 3.5 KB
+  of shared memory per warp. Following section 8.1, that has to pay for the blocks it costs.
