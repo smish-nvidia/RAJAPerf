@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs><marker id="arr-1a202c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a202c"/></marker><marker id="arr-718096" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#718096"/></marker><marker id="arr-a0aec0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a0aec0"/></marker><marker id="arr-2b6cb0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/></marker><marker id="arr-c05621" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c05621"/></marker><marker id="arr-2f855a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f855a"/></marker><marker id="arr-c53030" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c53030"/></marker><marker id="arr-6b46c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b46c1"/></marker></defs>
+<rect width="640" height="360" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+<line x1="60.1" y1="296.8" x2="150.1" y2="238.1" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="150.1" y1="238.1" x2="326.0" y2="235.9" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="326.0" y1="235.9" x2="251.6" y2="309.2" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="251.6" y1="309.2" x2="60.1" y2="296.8" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="58.1" y1="121.4" x2="260.9" y2="104.7" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="260.9" y1="104.7" x2="320.9" y2="97.3" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="320.9" y1="97.3" x2="161.5" y2="57.9" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="161.5" y1="57.9" x2="58.1" y2="121.4" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="60.1" y1="296.8" x2="251.6" y2="309.2" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="251.6" y1="309.2" x2="260.9" y2="104.7" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="260.9" y1="104.7" x2="58.1" y2="121.4" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="58.1" y1="121.4" x2="60.1" y2="296.8" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="251.6" y1="309.2" x2="326.0" y2="235.9" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="326.0" y1="235.9" x2="320.9" y2="97.3" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="320.9" y1="97.3" x2="260.9" y2="104.7" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="260.9" y1="104.7" x2="251.6" y2="309.2" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="326.0" y1="235.9" x2="150.1" y2="238.1" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="150.1" y1="238.1" x2="161.5" y2="57.9" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="161.5" y1="57.9" x2="320.9" y2="97.3" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="320.9" y1="97.3" x2="326.0" y2="235.9" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="150.1" y1="238.1" x2="60.1" y2="296.8" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="60.1" y1="296.8" x2="58.1" y2="121.4" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="58.1" y1="121.4" x2="161.5" y2="57.9" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="161.5" y1="57.9" x2="150.1" y2="238.1" stroke="#718096" stroke-opacity="1.0" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<polygon points="289.8,186.8 251.6,309.2 326.0,235.9" fill="#2b6cb0" fill-opacity="0.12" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="289.8,186.8 326.0,235.9 320.9,97.3" fill="#4299e1" fill-opacity="0.22" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="289.8,186.8 320.9,97.3 260.9,104.7" fill="#2b6cb0" fill-opacity="0.12" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon points="289.8,186.8 260.9,104.7 251.6,309.2" fill="#4299e1" fill-opacity="0.22" stroke="#2b6cb0" stroke-opacity="1.0" stroke-width="1.4" stroke-linejoin="round"/>
+<circle cx="289.8" cy="186.8" r="3.5" fill="#2b6cb0"/>
+<text x="335.8" y="183.8" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#2b6cb0" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">face centre</text>
+<line x1="198.6" y1="182.7" x2="289.8" y2="186.8" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="198.6" y1="182.7" x2="251.6" y2="309.2" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="198.6" y1="182.7" x2="326.0" y2="235.9" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="289.8" y1="186.8" x2="251.6" y2="309.2" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="289.8" y1="186.8" x2="326.0" y2="235.9" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="251.6" y1="309.2" x2="326.0" y2="235.9" stroke="#c05621" stroke-opacity="1.0" stroke-width="1.6" stroke-linecap="round"/>
+<circle cx="198.6" cy="182.7" r="3.5" fill="#c05621"/>
+<text x="164.6" y="191.7" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#c05621" text-anchor="middle" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">centre</text>
+<text x="395.0" y="70.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#2b6cb0" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Each face: 4 triangles around its</text>
+<text x="395.0" y="88.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#2b6cb0" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">centre. All 24 are the hex surface</text>
+<text x="395.0" y="106.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#2b6cb0" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">for every method.</text>
+<text x="395.0" y="270.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#c05621" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Each triangle coned to the hex</text>
+<text x="395.0" y="288.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#c05621" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">centre: one of the 24 tets (only</text>
+<text x="395.0" y="306.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#c05621" text-anchor="start" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">the tet methods use them).</text>
+</svg>

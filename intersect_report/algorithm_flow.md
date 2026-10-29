@@ -6,7 +6,7 @@ This note follows the data through the two queries, from two meshes to the list 
 
 It covers what each stage computes, which thread computes it, and where the data lives in between.
 
-tet_intersection's `docs/projection_moments.md` explains the mathematics. Here, the term of one
+[`projection_moments.md`](projection_moments.md) explains the mathematics. Here, the term of one
 *item* is treated as a black box:
 - an item is a boundary triangle T of a hex of A paired with a boundary triangle S of a hex of B (or with a cell of B);
 - [`add_projected_pair`](../src/tet/projection.hpp) (or `add_projected_box`) adds that item's
@@ -434,7 +434,7 @@ To reproduce: `raja_comparison --jitter 0` and `raja_comparison --jitter 0.2` (s
 ### Inside the moment kernels
 
 The moment kernels take most of the time. The latest profile of the subzone kernel (in
-tet_intersection's `docs/projection_optimization_log.md`, which records every change tried
+[`projection_optimization_log.md`](projection_optimization_log.md), which records every change tried
 on these kernels, kept or not, with its measurements) shows where it goes:
 - **At a jitter of 0.3**, clipping is 58% of the kernel's time, with about 18 of 32 lanes active.
   Polygons of different sizes make the lanes loop different numbers of times, and the FP64 pipe is
@@ -450,7 +450,7 @@ Section 8 explains how the kernels got here.
 ## 8. Lessons from the optimization passes
 
 The kernels of section 4 are the result of many passes of profiling, trying an idea, and measuring
-it. tet_intersection's `docs/projection_optimization_log.md` records every idea tried,
+it. [`projection_optimization_log.md`](projection_optimization_log.md) records every idea tried,
 kept or not, so that none is tried twice. This section draws the lessons out of it, with the
 measurements that taught them.
 
@@ -482,7 +482,7 @@ Over the passes made at the locked clock, the moment kernels got 1.6–3.8 times
 
 Before the clock was locked, the earlier passes had already taken the hex kernel from 17.8 ms (a
 thread per pair) to 2.6 ms (section 7 of
-tet_intersection's `docs/projection_moments.md`).
+[`projection_moments.md`](projection_moments.md)).
 
 ### 8.1 Where the polygons live decides the rest
 
