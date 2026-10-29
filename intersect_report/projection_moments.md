@@ -62,7 +62,7 @@ give too.
 
 For a triangle $T$:
 
-- $\sigma_T = \operatorname{sign}(n_{T,x})$ is the sign of the $x$-component of its outward normal;
+- $\sigma_T = \mathrm{sign}(n_{T,x})$ is the sign of the $x$-component of its outward normal;
 - $\pi(T)$ is its projection onto the $yz$-plane;
 - $x_T(y, z)$ is the height of its plane, so that $(x_T(y, z), y, z)$ lies on it.
 
@@ -179,11 +179,11 @@ A box $[\mathbf{lo}, \mathbf{hi}]$ has only two faces that are not parallel to $
 each triangle $T$ of the hex has two terms, and they combine (with $h = hi - lo$):
 
 $$
-\sigma_T \iint_{\pi(T) \cap R} \Big[ (x_T - lo)^+ - (x_T - hi)^+ \Big] = \sigma_T \iint_{\pi(T) \cap R} \operatorname{clamp}(x_T - lo,\ 0,\ h) .
+\sigma_T \iint_{\pi(T) \cap R} \Big[ (x_T - lo)^+ - (x_T - hi)^+ \Big] = \sigma_T \iint_{\pi(T) \cap R} \mathrm{clamp}(x_T - lo,\ 0,\ h) .
 $$
 
-The first moments become $(\operatorname{clamp}(x_T, lo, hi)^2 - lo^2)/2$ and
-$y\, \operatorname{clamp}(x_T - lo, 0, h)$, $z\, \operatorname{clamp}(x_T - lo, 0, h)$.
+The first moments become $(\mathrm{clamp}(x_T, lo, hi)^2 - lo^2)/2$ and
+$y\, \mathrm{clamp}(x_T - lo, 0, h)$, $z\, \mathrm{clamp}(x_T - lo, 0, h)$.
 
 ![A hex against one cell: below, inside and above the cell, and the clamp](figures/fig4_cell.svg)
 
